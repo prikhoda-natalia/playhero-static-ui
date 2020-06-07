@@ -1,0 +1,31 @@
+.game-list {
+  display: grid;
+  row-gap: 16px;
+  height: 100%;
+
+  &__item {
+    background: #f0f;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 96px 24px, cover, cover;
+    background-position: 50% 50%;
+    border-radius: 6px;
+
+    &--call-of-duty {
+      background-image: url("./assets/call-of-duty-logo.svg"),
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("./assets/call-of-duty-card.jpg");
+    }
+
+    &--fortnite {
+      background-image: url("./assets/fortnite-logo.svg"),
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("./assets/fortnite-card.jpg");
+    }
+
+    &--minecraft {
+      background-image: url("./assets/minecraft-logo.svg"),
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("./assets/minecraft-card.jpg");
+    }
+  }
+}
