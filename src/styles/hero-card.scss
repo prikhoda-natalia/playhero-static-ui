@@ -1,0 +1,76 @@
+.hero-card {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 24px;
+
+  &__avatar {
+    width: 201px;
+    height: 158px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+  }
+
+  &__description {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ACACAC;
+  }
+
+  &__details {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__games {
+    margin-left: 16px;
+  }
+
+  &__media {
+    display: flex;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #2B2B2B;
+    margin-bottom: 8px;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: #2B2B2B;
+    margin-bottom: 8px;
+  }
+
+  &__profile-info {
+    max-width: 66.66%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__sale-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__spots-info {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ACACAC;
+  }
+}

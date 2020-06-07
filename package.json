@@ -1,0 +1,21 @@
+{
+  "name": "playhero-statis-ui",
+  "version": "1.0.0",
+  "description": "Static UI for Playhero website",
+  "main": "index.html",
+  "repository": "https://github.com/prikhoda-natalia/playhero-statis-ui",
+  "author": "Natalia Prikhoda",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "require-dir": "^1.2.0",
+    "slash": "^3.0.0"
+  }
+}

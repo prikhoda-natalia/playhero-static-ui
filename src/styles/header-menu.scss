@@ -1,0 +1,49 @@
+@import './_utils/uads';
+
+.header-menu {
+  @include uads-ul(
+    $counter-reset: -html-counter 0,
+    $display: flex,
+    $list-style-position: outside,
+    $list-style-type: none,
+    $margin-bottom: 0,
+    $margin-left: 0,
+    $margin-right: 36px,
+    $margin-top: 0,
+    $padding-bottom: 0,
+    $padding-left: 0,
+    $padding-right: 0,
+    $padding-top: 0
+  );
+  
+  &__link {
+    @include uads-a(
+      $color: #2B2B2B,
+      $color--active: #2B2B2B,
+      $color--active-link: #2B2B2B,
+      $color--active-visited: #2B2B2B,
+      $color--visited: #2B2B2B,
+      $cursor: pointer,
+      $outline-color--active-link: currentColor,
+      $outline-style--active-link: dotted,
+      $outline-width--active-link: 1px,
+      $outline-color--active-visited: currentColor,
+      $outline-style--active-visited: dotted,
+      $outline-width--active-visited: 1px,
+      $outline-color--focus: currentColor,
+      $outline-style--focus: dotted,
+      $outline-width--focus: 1px,
+      $text-decoration: none,
+      $user-focus: normal,
+      $user-select: element
+    );
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 12px;
+
+    &--active {
+      font-weight: 500;
+    }
+  }
+}

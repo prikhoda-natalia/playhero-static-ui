@@ -1,0 +1,23 @@
+@import '_utils/uads';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include uads-body(
+    $display: block,
+    $margin-top: 0,
+    $margin-left: 0,
+    $margin-bottom: 0,
+    $margin-right: 0,
+    $outline-color--focus: currentColor,
+    $outline-style--focus: dotted,
+    $outline-width--focus: 1px
+  );
+  color: #2B2B2B;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+}

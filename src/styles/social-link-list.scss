@@ -1,0 +1,50 @@
+@import '_utils/uads';
+
+.social-link-list {
+  @include uads-ul(
+    $counter-reset: -html-counter 0,
+    $display: flex,
+    $list-style-position: outside,
+    $list-style-type: none,
+    $margin-bottom: 0,
+    $margin-left: 0,
+    $margin-right: 0,
+    $margin-top: 0,
+    $padding-bottom: 0,
+    $padding-left: 0,
+    $padding-right: 0,
+    $padding-top: 0
+  );
+
+  &__item {
+    margin-right: 24px;
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  &__link {
+    @include uads-a(
+      $color: #ffffff,
+      $color--active: #ffffff,
+      $color--active-link: #ffffff,
+      $color--active-visited: #ffffff,
+      $color--visited: #ffffff,
+      $cursor: pointer,
+      $outline-color--active-link: currentColor,
+      $outline-style--active-link: dotted,
+      $outline-width--active-link: 1px,
+      $outline-color--active-visited: currentColor,
+      $outline-style--active-visited: dotted,
+      $outline-width--active-visited: 1px,
+      $outline-color--focus: currentColor,
+      $outline-style--focus: dotted,
+      $outline-width--focus: 1px,
+      $text-decoration: none,
+      $user-focus: normal,
+      $user-select: element
+    );
+    display: flex;
+  }
+}
