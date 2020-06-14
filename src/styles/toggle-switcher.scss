@@ -1,0 +1,54 @@
+.toggle-switcher {
+  position: relative;
+  border: 1px solid #E2E2E2;
+  border-radius: 10px;
+  padding: 5px;
+
+  &__control {
+    display: none;
+  }
+
+  &__label {
+    width: 50%;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 12px;
+    color: #EB922F;
+    position: relative;
+    text-align: center;
+  }
+
+  &__labels {
+    display: flex;
+  }
+
+  &__selection-box {
+    background: #EB922F;
+    border-radius: 10px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc((100% - 10px) / 2);
+    padding: 12px;
+    transition: left 0.25s ease-in-out;
+
+    &::before {
+      content: "\00a0";
+      display: block;
+      line-height: 14px;
+    }
+  }
+
+  @for $i from 1 through 2 {
+    .toggle-switcher__control:nth-child(#{$i}):checked {
+      & ~ .toggle-switcher__selection-box {
+        left: calc(((#{$i} - 1) * ((100% - 10px) / 2)) + 5px);
+      }
+
+      & ~ .toggle-switcher__labels .toggle-switcher__label:nth-child(#{$i}) {
+        color: #fff;
+      }
+    }
+  }
+}

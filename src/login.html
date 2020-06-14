@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Contact | Playhero</title>
+    <title>Login | Playhero</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
@@ -34,10 +34,15 @@
               <li>
                 <a class="header-menu__link" href="/">Contacts</a>
               </li>
-              <li>
-                <a class="header-menu__link" href="/">Account</a>
-              </li>
             </ul>
+            <div class="auth-button-list">
+              <div class="auth-button-list__item">
+                <a class="secondary-button secondary-button--stroked" href="#">Log In</a>
+              </div>
+              <div class="auth-button-list__item">
+                <a class="secondary-button secondary-button--solid" href="#">Register</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -47,20 +52,17 @@
             <div class="single-boxed-section__box">
               <div class="form-box">
                 <div class="form-box__header">
-                  <div class="form-box__title"><b>Contact</b> Us</div>
+                  <div class="toggle-switcher">
+                    <input type="radio" class="toggle-switcher__control" id="login" name="auth-switch" checked />
+                    <input type="radio" class="toggle-switcher__control" id="register" name="auth-switch" />
+                    <div class="toggle-switcher__selection-box"></div>
+                    <div class="toggle-switcher__labels">
+                      <label class="toggle-switcher__label" for="login">Log In</label>
+                      <label class="toggle-switcher__label" for="register">Register</label>
+                    </div>
+                  </div>
                 </div>
                 <div class="form-box__fields">
-                  <div class="form-field">
-                    <div class="form-field__prefix">
-                      <!-- START: field-avatar.svg -->
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14.6666 15.3333V13.5556C14.6666 12.6126 14.3154 11.7082 13.6903 11.0414C13.0652 10.3746 12.2173 10 11.3333 10H4.66659C3.78253 10 2.93468 10.3746 2.30956 11.0414C1.68444 11.7082 1.33325 12.6126 1.33325 13.5556V15.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7.99984 7.33333C9.84079 7.33333 11.3332 5.84095 11.3332 4C11.3332 2.15905 9.84079 0.666664 7.99984 0.666664C6.15889 0.666664 4.6665 2.15905 4.6665 4C4.6665 5.84095 6.15889 7.33333 7.99984 7.33333Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      <!-- END: field-avatar.svg -->
-                    </div>
-                    <input type="text" class="form-field__input" placeholder="Full Name" required />
-                  </div>
                   <div class="form-field">
                     <div class="form-field__prefix">
                       <!-- START: field-email.svg -->
@@ -74,26 +76,26 @@
                   </div>
                   <div class="form-field">
                     <div class="form-field__prefix">
-                      <!-- START: field-write.svg -->
+                      <!-- START: field-password.svg -->
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="path-1-inside-1" fill="white">
-                        <path d="M7.29708 2.73903H2.65855C2.30706 2.73903 1.96996 2.87866 1.72142 3.1272C1.47288 3.37574 1.33325 3.71284 1.33325 4.06433V13.3414C1.33325 13.6929 1.47288 14.03 1.72142 14.2785C1.96996 14.5271 2.30706 14.6667 2.65855 14.6667H11.9356C12.2871 14.6667 12.6242 14.5271 12.8727 14.2785C13.1213 14.03 13.2609 13.6929 13.2609 13.3414V8.70286"/>
-                        </mask>
-                        <path d="M7.29708 3.73903C7.84936 3.73903 8.29708 3.29132 8.29708 2.73903C8.29708 2.18675 7.84936 1.73903 7.29708 1.73903V3.73903ZM2.65855 2.73903V1.73903V2.73903ZM1.33325 4.06433H0.333252H1.33325ZM1.33325 13.3414H0.333252H1.33325ZM14.2609 8.70286C14.2609 8.15057 13.8132 7.70286 13.2609 7.70286C12.7086 7.70286 12.2609 8.15057 12.2609 8.70286H14.2609ZM7.29708 1.73903H2.65855V3.73903H7.29708V1.73903ZM2.65855 1.73903C2.04184 1.73903 1.45039 1.98402 1.01431 2.42009L2.42853 3.83431C2.48953 3.7733 2.57227 3.73903 2.65855 3.73903V1.73903ZM1.01431 2.42009C0.578237 2.85617 0.333252 3.44762 0.333252 4.06433H2.33325C2.33325 3.97805 2.36752 3.89531 2.42853 3.83431L1.01431 2.42009ZM0.333252 4.06433V13.3414H2.33325V4.06433H0.333252ZM0.333252 13.3414C0.333252 13.9581 0.578238 14.5495 1.01431 14.9856L2.42853 13.5714C2.36752 13.5104 2.33325 13.4277 2.33325 13.3414H0.333252ZM1.01431 14.9856C1.45039 15.4217 2.04184 15.6667 2.65855 15.6667V13.6667C2.57227 13.6667 2.48953 13.6324 2.42853 13.5714L1.01431 14.9856ZM2.65855 15.6667H11.9356V13.6667H2.65855V15.6667ZM11.9356 15.6667C12.5523 15.6667 13.1438 15.4217 13.5798 14.9856L12.1656 13.5714C12.1046 13.6324 12.0219 13.6667 11.9356 13.6667V15.6667ZM13.5798 14.9856C14.0159 14.5495 14.2609 13.9581 14.2609 13.3414H12.2609C12.2609 13.4277 12.2266 13.5104 12.1656 13.5714L13.5798 14.9856ZM14.2609 13.3414V8.70286H12.2609V13.3414H14.2609Z" fill="currentColor" mask="url(#path-1-inside-1)"/>
-                        <path d="M12.6204 2.0986C12.7903 1.92875 13.0206 1.83333 13.2608 1.83333C13.501 1.83333 13.7314 1.92875 13.9013 2.0986C14.0711 2.26845 14.1665 2.49882 14.1665 2.73902C14.1665 2.97922 14.0711 3.20959 13.9013 3.37944L7.70404 9.57666L5.99627 10.0036L6.42321 8.29582L12.6204 2.0986Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12.6667 7.26672H3.33333C2.59695 7.26672 2 7.92337 2 8.73339V13.8667C2 14.6767 2.59695 15.3334 3.33333 15.3334H12.6667C13.403 15.3334 14 14.6767 14 13.8667V8.73339C14 7.92337 13.403 7.26672 12.6667 7.26672Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.66669 7.26669V4.33335C4.66669 3.36089 5.01788 2.42826 5.643 1.74063C6.26812 1.053 7.11597 0.666687 8.00002 0.666687C8.88408 0.666687 9.73192 1.053 10.357 1.74063C10.9822 2.42826 11.3334 3.36089 11.3334 4.33335V7.26669" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
-                      <!-- END: field-write.svg -->
+                      <!-- END: field-password.svg -->
                     </div>
-                    <textarea class="form-field__textarea" placeholder="Ask us anything..." rows="5" required></textarea>
+                    <input type="password" class="form-field__input" placeholder="Password" required />
                   </div>
                 </div>
+                <div class="form-box__secondary-actions">
+                  <a href="#">Forgot password?</a>
+                </div>
                 <div class="form-box__actions">
-                  <button class="primary-button primary-button--solid" type="submit" disabled>Send</button>
+                  <button class="primary-button primary-button--solid" type="submit" disabled>Log In</button>
                 </div>
               </div>
             </div>
             <div class="single-boxed-section__decor">
-              <img class="single-boxed-section__decor-image" src="./assets/contact.svg" />
+              <img class="single-boxed-section__decor-image" src="./assets/auth.svg" />
             </div>
           </div>
         </div>
