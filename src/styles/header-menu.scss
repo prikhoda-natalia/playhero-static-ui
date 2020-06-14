@@ -46,4 +46,8 @@
       font-weight: 500;
     }
   }
+
+  @media (max-width: $bp-max-tablet) {
+    margin-right: 0;
+  }
 }

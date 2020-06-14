@@ -1,0 +1,33 @@
+.single-boxed-section {
+  background-image: url("./assets/empty-index.svg");
+  min-height: 512px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 700px;
+  padding: 64px 0;
+
+  &__box {
+    width: 33.33%;
+  }
+
+  @media (max-width: $bp-max-tablet) {
+    padding-left: 32px;
+    padding-right: 32px;
+    background-position: center bottom;
+    background-size: contain;
+
+    &__box {
+      width: 75%;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: $bp-max-mobile-landscape) {
+    padding: 48px 0 64px;
+    min-height: 360px;
+
+    &__box {
+      width: 100%;
+    }
+  }
+}
