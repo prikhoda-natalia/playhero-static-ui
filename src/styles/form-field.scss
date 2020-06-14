@@ -1,0 +1,78 @@
+@import "_utils/uads";
+
+.form-field {
+  padding-bottom: 8px;
+  position: relative;
+
+  &__input {
+    @include uads-input(
+      $appearance: textfield,
+      $background-color: white,
+      $border-color: #4c4c4c,
+      $border-color--readonly: rgb(188, 188, 188),
+      $border-radius: 0,
+      $border-style: solid,
+      $border-width: 0,
+      $box-sizing: border-box,
+      $color: #000,
+      $cursor: auto,
+      $display: block,
+      $font-family: inherit,
+      $font-size: 16px,
+      $font-weight: 300,
+      $height: auto,
+      $letter-spacing: normal,
+      $line-height: 19px,
+      $margin-bottom: 0,
+      $margin-left: 0,
+      $margin-right: 0,
+      $margin-top: 0,
+      $opacity--disabled: 0.4,
+      $outline-offset--focus: -2px,
+      $outline-style--focus-readonly: none,
+      $padding-bottom: 16px,
+      $padding-left: 32px,
+      $padding-right: 24px,
+      $padding-top: 8px,
+      $rtl-ordering: logical,
+      $text-align: start,
+      $text-indent: 0,
+      $text-shadow: none,
+      $text-transform: none,
+      $user-select: text,
+      $word-spacing: normal,
+      $writing-mode: horizontal-tb,
+      $xul-box-orient: inherit
+    );
+    width: 100%;
+    border-bottom: 1px solid #E2E2E2;
+    transition: border-color 0.25s ease-in-out;
+
+    &::placeholder {
+      color: #ACACAC;
+    }
+
+    &:focus {
+      @include uads--focus(
+        $outline-color: #1f5ccf,
+        $outline-style: none,
+        $outline-width: 3px
+      );
+      border-bottom-color: #EB922F;
+    }
+  }
+
+  &__prefix {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 16px;
+    color: #ACACAC;
+
+    svg {
+      width: 1em;
+      height: 1em;
+      display: flex;
+    }
+  }
+}
