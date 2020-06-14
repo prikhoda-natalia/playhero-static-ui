@@ -21,3 +21,46 @@ body {
   font-size: 16px;
   line-height: 19px;
 }
+
+a {
+  $text-color: #EB922F;
+
+  font-weight: 500;
+
+  @include uads-a(
+    $color: $text-color,
+    $color--active: $text-color,
+    $color--active-link: $text-color,
+    $color--active-visited: $text-color,
+    $color--visited: $text-color,
+    $cursor: pointer,
+    $outline-color--active-link: currentColor,
+    $outline-style--active-link: dotted,
+    $outline-width--active-link: 1px,
+    $outline-color--active-visited: currentColor,
+    $outline-style--active-visited: dotted,
+    $outline-width--active-visited: 1px,
+    $outline-color--focus: currentColor,
+    $outline-style--focus: dotted,
+    $outline-width--focus: 1px,
+    $text-decoration: none,
+    $user-focus: normal,
+    $user-select: element
+  );
+}
+
+b {
+  font-weight: 500;
+}
+
+p {
+  margin: 24px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

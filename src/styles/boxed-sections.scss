@@ -1,0 +1,56 @@
+@import "_utils/breakpoints";
+
+.boxed-sections {
+  padding: 48px 0 64px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+  row-gap: 24px;
+
+  &__item {
+    @for $i from 1 through 12 {
+      &--col-#{$i} {
+        grid-column: span $i;
+      }
+    }
+  }
+
+  @media (max-width: $bp-max-tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    &__item {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @for $i from 1 through 12 {
+        &--col-#{$i} {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $bp-max-mobile-landscape) {
+    padding-left: 0;
+    padding-right: 0;
+
+    &__item {
+      padding-bottom: 48px;
+      margin-bottom: 48px;
+      border-bottom: 1px solid #E2E2E2;
+
+      &:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: 0;
+      }
+    }
+  }
+}

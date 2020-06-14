@@ -1,0 +1,37 @@
+@import "_utils/uads";
+
+.tertiary-button {
+  $text-color: #EB922F;
+  $border-color: #EB922F;
+
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: 1px solid $border-color;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  display: inline-block;
+
+  &[href] {
+    @include uads-a(
+      $color: $text-color,
+      $color--active: $text-color,
+      $color--active-link: $text-color,
+      $color--active-visited: $text-color,
+      $color--visited: $text-color,
+      $cursor: pointer,
+      $outline-color--active-link: currentColor,
+      $outline-style--active-link: dotted,
+      $outline-width--active-link: 1px,
+      $outline-color--active-visited: currentColor,
+      $outline-style--active-visited: dotted,
+      $outline-width--active-visited: 1px,
+      $outline-color--focus: currentColor,
+      $outline-style--focus: dotted,
+      $outline-width--focus: 1px,
+      $text-decoration: none,
+      $user-focus: normal,
+      $user-select: element
+    );
+  }
+}

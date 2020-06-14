@@ -1,0 +1,45 @@
+.next-steps {
+  padding: 64px;
+  background: #fff;
+  border-radius: 10px;
+
+  &__icon {
+    margin-right: 24px;
+    font-size: 40px;
+    color: #eb922f;
+
+    svg {
+      width: 1em;
+      height: 1em;
+      display: flex;
+    }
+  }
+
+  &__item-content {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: $bp-max-mobile-landscape) {
+    border-radius: 0;
+    padding: 0;
+  }
+}
