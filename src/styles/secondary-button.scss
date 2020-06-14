@@ -1,0 +1,53 @@
+@import "_utils/uads";
+
+$button-views: (
+  "solid": (
+    "background-color": #EB922F,
+    "border-color": #EB922F,
+    "text-color": #ffffff,
+  ),
+  "stroked": (
+    "background-color": #ffffff,
+    "border-color": #EB922F,
+    "text-color": #EB922F,
+  )
+);
+
+.secondary-button {  
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  display: inline-block;
+
+  @each $view-name, $view-style in $button-views {
+    &--#{$view-name} {
+      background: map-get($view-style, "background-color");
+      border: 1px solid map-get($view-style, "border-color");
+      border-radius: 10px;
+  
+      &[href] {
+        @include uads-a(
+          $color: map-get($view-style, "text-color"),
+          $color--active: map-get($view-style, "text-color"),
+          $color--active-link: map-get($view-style, "text-color"),
+          $color--active-visited: map-get($view-style, "text-color"),
+          $color--visited: map-get($view-style, "text-color"),
+          $cursor: pointer,
+          $outline-color--active-link: map-get($view-style, "border-color"),
+          $outline-style--active-link: dotted,
+          $outline-width--active-link: 1px,
+          $outline-color--active-visited: map-get($view-style, "border-color"),
+          $outline-style--active-visited: dotted,
+          $outline-width--active-visited: 1px,
+          $outline-color--focus: map-get($view-style, "border-color"),
+          $outline-style--focus: dotted,
+          $outline-width--focus: 1px,
+          $text-decoration: none,
+          $user-focus: normal,
+          $user-select: element
+        );
+      }
+    }
+  }
+}

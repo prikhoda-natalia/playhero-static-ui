@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Confirmation | Playhero</title>
+    <title>Home Guest | Playhero</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
@@ -34,10 +34,15 @@
               <li>
                 <a class="header-menu__link" href="/">Contacts</a>
               </li>
-              <li>
-                <a class="header-menu__link" href="/">Account</a>
-              </li>
             </ul>
+            <div class="auth-button-list">
+              <div class="auth-button-list__item">
+                <a class="secondary-button secondary-button--stroked" href="#">Log In</a>
+              </div>
+              <div class="auth-button-list__item">
+                <a class="secondary-button secondary-button--solid" href="#">Register</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -45,109 +50,202 @@
         <div class="page__content-container">
           <div class="promo-media">
             <div class="promo-media__text">
-              You’re playing with <b>Hero Name</b>! 🎉
+              Play your <b>hero</b> on your favourite game.
             </div>
           </div>
-          <div class="boxed-sections">
-            <div class="boxed-sections__item boxed-sections__item--col-6">
-              <div class="profile-details">
-                <div class="profile-details__avatar">
-                  <img
-                    class="profile-details__avatar-image"
-                    src="./assets/hero-profile-avatar.jpg"
-                  />
-                </div>
-                <div class="profile-details__content">
-                  <div class="profile-details__header">
-                    <div class="profile-details__name">Hero Name</div>
-                    <div class="profile-details__tag-list">
-                      <div class="profile-details__tag profile-details__tag--transparent">Hero Type</div>
-                      <div class="profile-details__tag profile-details__tag--green">Purchased</div>
+          <div class="card-list">
+            <div class="card-list__title">Active <b>Heroes</b></div>
+            <div class="card-list__content">
+              <div class="card-list__content-item">
+                <div class="hero-card">
+                  <div class="hero-card__media">
+                    <div class="hero-card__avatar">
+                      <img
+                        class="hero-card__avatar-image"
+                        src="./assets/hero-avatar.jpg"
+                      />
+                    </div>
+                    <div class="hero-card__games">
+                      <div class="game-list">
+                        <div
+                          class="game-list__item game-list__item--call-of-duty"
+                        ></div>
+                      </div>
                     </div>
                   </div>
-                  <div class="profile-details__text">
-                    <p>Congratulations! Get ready for a one hour gaming session with <b>Hero Name</b>!</p>
-                    <p>We’re now contacting them to schedule your session! You’ll receive an email from us within 7 workings days.</p>
-                  </div>
-                  <div class="profile-details__actions">
-                    <a class="secondary-button secondary-button--stroked" href="#">To Account</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="boxed-sections__item boxed-sections__item--col-5">
-              <div class="next-steps">
-                <div class="next-steps__title">What Next?</div>
-                <div class="next-steps__list">
-                  <div class="next-steps__list-item">
-                    <div class="next-steps__icon">
-                      <!-- START: calendar.svg -->
-                      <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M32.963 5.83337H7.03708C4.99158 5.83337 3.33337 7.475 3.33337 9.50004V35.1667C3.33337 37.1917 4.99158 38.8334 7.03708 38.8334H32.963C35.0085 38.8334 36.6667 37.1917 36.6667 35.1667V9.50004C36.6667 7.475 35.0085 5.83337 32.963 5.83337Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M27.4075 2.16675V9.50008" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12.5927 2.16675V9.50008" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M3.33337 16.8334H36.6667" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      <!-- END: calendar.svg -->
+                  <div class="hero-card__details">
+                    <div class="hero-card__profile-info">
+                      <div class="hero-card__name">Tfue</div>
+                      <div class="hero-card__description">Pro-Gamer</div>
                     </div>
-                    <div class="next-steps__item-content"><b>Hero Name</b> has 7 days to provide us with 3 available times for your session.</div>
-                  </div>
-                  <div class="next-steps__list-item">
-                    <div class="next-steps__icon">
-                      <!-- START: clock.svg -->
-                      <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M37.5 20.5001C37.5 30.1651 29.6649 38.0001 20 38.0001C10.335 38.0001 2.49996 30.1651 2.49996 20.5001C2.49996 10.8351 10.335 3.00008 20 3.00008C29.6649 3.00008 37.5 10.8351 37.5 20.5001Z" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M20 9.50012V20.5001L27.3333 24.1668" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                      <!-- END: clock.svg -->
+                    <div class="hero-card__sale-info">
+                      <div class="hero-card__price">£2500</div>
+                      <div class="hero-card__spots-info">3 spots left</div>
                     </div>
-                    <div class="next-steps__item-content">After we receive their availability, we’ll email you the <b>3 times</b> to choose from.</div>
-                  </div>
-                  <div class="next-steps__list-item">
-                    <div class="next-steps__icon">
-                      <!-- START: check.svg -->
-                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0)">
-                        <path d="M38.3333 18.3239V20.0106C38.331 23.964 37.0509 27.8108 34.6837 30.9772C32.3166 34.1437 28.9893 36.4601 25.1981 37.581C21.4069 38.702 17.3549 38.5674 13.6465 37.1973C9.93804 35.8272 6.77182 33.2951 4.62005 29.9785C2.46828 26.662 1.44624 22.7387 1.70637 18.7938C1.96649 14.8489 3.49484 11.0938 6.06347 8.08854C8.6321 5.08324 12.1034 2.98878 15.9596 2.11751C19.8159 1.24624 23.8504 1.64486 27.4616 3.25391" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M38.3333 5.34399L20 23.6957L14.5 18.1957" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0">
-                        <rect width="40" height="40" fill="white" transform="translate(0 0.00012207)"/>
-                        </clipPath>
-                        </defs>
-                      </svg>
-                      <!-- END: check.svg -->
-                    </div>
-                    <div class="next-steps__item-content">Once you’ve confirmed the session time, we’ll send your gaming ID to Hero Name, who’ll <b>add you</b> before the session starts.</div>
-                  </div>
-                  <div class="next-steps__list-item">
-                    <div class="next-steps__icon">
-                      <!-- START: dollar.svg -->
-                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0)">
-                        <path d="M19.2426 0V40" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M28.3334 7.27271H14.697C13.0093 7.27271 11.3907 7.94316 10.1972 9.13657C9.00383 10.33 8.33337 11.9486 8.33337 13.6363C8.33337 15.3241 9.00383 16.9427 10.1972 18.1361C11.3907 19.3295 13.0093 20 14.697 20H23.7879C25.4757 20 27.0943 20.6704 28.2877 21.8638C29.4811 23.0573 30.1516 24.6759 30.1516 26.3636C30.1516 28.0514 29.4811 29.67 28.2877 30.8634C27.0943 32.0568 25.4757 32.7272 23.7879 32.7272H8.33337" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0">
-                        <rect width="40" height="40" fill="white"/>
-                        </clipPath>
-                        </defs>
-                      </svg>
-                      <!-- START: dollar.svg --> 
-                    </div>
-                    <div class="next-steps__item-content">If for any reason the session isn’t fulfilled, your money will be <b>returned</b> to you within 7 business days.</div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="boxed-sections__item boxed-sections__item--col-12">
-              <div class="purchase-note">
-                <div class="purchase-note__title">Please Note</div>
-                <div class="purchase-note__content">
-                  <p>Your booking is processed in GBP. The approximate USD price is estimated through mid-market exchange rates from the last 24 hours. You will be charged <b>£000</b>.</p>
-                  <p>By making this booking, you agree to our <a href="#">Terms</a> & <a href="#">Privacy Policy</a>.</p>
+              <div class="card-list__content-item">
+                <div class="hero-card">
+                  <div class="hero-card__media">
+                    <div class="hero-card__avatar">
+                      <img
+                        class="hero-card__avatar-image"
+                        src="./assets/hero-avatar.jpg"
+                      />
+                    </div>
+                    <div class="hero-card__games">
+                      <div class="game-list">
+                        <div
+                          class="game-list__item game-list__item--call-of-duty"
+                        ></div>
+                        <div
+                          class="game-list__item game-list__item--fortnite"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hero-card__details">
+                    <div class="hero-card__profile-info">
+                      <div class="hero-card__name">Tfue</div>
+                      <div class="hero-card__description">Pro-Gamer</div>
+                    </div>
+                    <div class="hero-card__sale-info">
+                      <div class="hero-card__price">£2500</div>
+                      <div class="hero-card__spots-info">3 spots left</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-list__content-item">
+                <div class="hero-card">
+                  <div class="hero-card__media">
+                    <div class="hero-card__avatar">
+                      <img
+                        class="hero-card__avatar-image"
+                        src="./assets/hero-avatar.jpg"
+                      />
+                    </div>
+                    <div class="hero-card__games">
+                      <div class="game-list">
+                        <div
+                          class="game-list__item game-list__item--call-of-duty"
+                        ></div>
+                        <div
+                          class="game-list__item game-list__item--fortnite"
+                        ></div>
+                        <div
+                          class="game-list__item game-list__item--minecraft"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hero-card__details">
+                    <div class="hero-card__profile-info">
+                      <div class="hero-card__name">Tfue</div>
+                      <div class="hero-card__description">Pro-Gamer</div>
+                    </div>
+                    <div class="hero-card__sale-info">
+                      <div class="hero-card__price">£2500</div>
+                      <div class="hero-card__spots-info">3 spots left</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-list__content-item">
+                <div class="hero-card">
+                  <div class="hero-card__media">
+                    <div class="hero-card__avatar">
+                      <img
+                        class="hero-card__avatar-image"
+                        src="./assets/hero-avatar.jpg"
+                      />
+                    </div>
+                    <div class="hero-card__games">
+                      <div class="game-list">
+                        <div
+                          class="game-list__item game-list__item--call-of-duty"
+                        ></div>
+                        <div
+                          class="game-list__item game-list__item--fortnite"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hero-card__details">
+                    <div class="hero-card__profile-info">
+                      <div class="hero-card__name">Tfue</div>
+                      <div class="hero-card__description">Pro-Gamer</div>
+                    </div>
+                    <div class="hero-card__sale-info">
+                      <div class="hero-card__price">£2500</div>
+                      <div class="hero-card__spots-info">3 spots left</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-list__content-item">
+                <div class="hero-card">
+                  <div class="hero-card__media">
+                    <div class="hero-card__avatar">
+                      <img
+                        class="hero-card__avatar-image"
+                        src="./assets/hero-avatar.jpg"
+                      />
+                    </div>
+                    <div class="hero-card__games">
+                      <div class="game-list">
+                        <div
+                          class="game-list__item game-list__item--call-of-duty"
+                        ></div>
+                        <div
+                          class="game-list__item game-list__item--fortnite"
+                        ></div>
+                        <div
+                          class="game-list__item game-list__item--minecraft"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hero-card__details">
+                    <div class="hero-card__profile-info">
+                      <div class="hero-card__name">Tfue</div>
+                      <div class="hero-card__description">Pro-Gamer</div>
+                    </div>
+                    <div class="hero-card__sale-info">
+                      <div class="hero-card__price">£2500</div>
+                      <div class="hero-card__spots-info">3 spots left</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-list__content-item">
+                <div class="hero-card">
+                  <div class="hero-card__media">
+                    <div class="hero-card__avatar">
+                      <img
+                        class="hero-card__avatar-image"
+                        src="./assets/hero-avatar.jpg"
+                      />
+                    </div>
+                    <div class="hero-card__games">
+                      <div class="game-list">
+                        <div
+                          class="game-list__item game-list__item--call-of-duty"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hero-card__details">
+                    <div class="hero-card__profile-info">
+                      <div class="hero-card__name">Tfue</div>
+                      <div class="hero-card__description">Pro-Gamer</div>
+                    </div>
+                    <div class="hero-card__sale-info">
+                      <div class="hero-card__price">£2500</div>
+                      <div class="hero-card__spots-info">3 spots left</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
