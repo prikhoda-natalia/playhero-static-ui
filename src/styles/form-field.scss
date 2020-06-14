@@ -9,7 +9,7 @@
   $line-height: 19px;
   $padding-bottom: 16px;
   $padding-left: 32px;
-  $padding-right: 24px;
+  $padding-right: 32px;
   $padding-top: 8px;
   $placeholder-color: #ACACAC;
   $transition: border-color 0.25s ease-in-out;
@@ -75,6 +75,14 @@
     }
   }
 
+  &__invalid-icon {
+    display: none;
+
+    .form-field--invalid & {
+      display: block;
+    }
+  }
+
   &__prefix {
     position: absolute;
     top: 10px;
@@ -90,6 +98,19 @@
 
     .form-field--has-value & {
       color: #2b2b2b;
+    }
+  }
+
+  &__suffix {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 16px;
+
+    svg {
+      width: 1em;
+      height: 1em;
+      display: flex;
     }
   }
 
