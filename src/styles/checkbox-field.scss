@@ -1,0 +1,36 @@
+.checkbox-field {
+  display: flex;
+
+  &__control {
+    display: none;
+  }
+
+  &__label {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 16px;
+    padding: 2px 0;
+  }
+
+  &__pseudo-checkbox {
+    color: transparent;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0px 1px #acacac;
+    border-radius: 6px;
+    padding: 6px;
+  
+    svg {
+      width: 1em;
+      height: 1em;
+      display: flex;
+    }
+
+    .checkbox-field__control:checked ~ & {
+      color: #1EA26B;
+    }
+  }
+}
