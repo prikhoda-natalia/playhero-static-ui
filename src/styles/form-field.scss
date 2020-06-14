@@ -74,5 +74,9 @@
       height: 1em;
       display: flex;
     }
+
+    .form-field--has-value & {
+      color: #2b2b2b;
+    }
   }
 }
