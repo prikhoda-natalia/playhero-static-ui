@@ -1,28 +1,41 @@
 @import "_utils/uads";
 
 .form-field {
+  $background-color: #ffffff;
+  $border-color: #E2E2E2;
+  $border-color--focused: #EB922F;
+  $font-size: 16px;
+  $font-weight: 300;
+  $line-height: 19px;
+  $padding-bottom: 16px;
+  $padding-left: 32px;
+  $padding-right: 24px;
+  $padding-top: 8px;
+  $placeholder-color: #ACACAC;
+  $transition: border-color 0.25s ease-in-out;
+
   padding-bottom: 8px;
   position: relative;
 
   &__input {
     @include uads-input(
       $appearance: textfield,
-      $background-color: white,
+      $background-color: $background-color,
       $border-color: #4c4c4c,
       $border-color--readonly: rgb(188, 188, 188),
       $border-radius: 0,
       $border-style: solid,
       $border-width: 0,
       $box-sizing: border-box,
-      $color: #000,
+      $color: inherit,
       $cursor: auto,
       $display: block,
       $font-family: inherit,
-      $font-size: 16px,
-      $font-weight: 300,
+      $font-size: $font-size,
+      $font-weight: $font-weight,
       $height: auto,
       $letter-spacing: normal,
-      $line-height: 19px,
+      $line-height: $line-height,
       $margin-bottom: 0,
       $margin-left: 0,
       $margin-right: 0,
@@ -30,10 +43,10 @@
       $opacity--disabled: 0.4,
       $outline-offset--focus: -2px,
       $outline-style--focus-readonly: none,
-      $padding-bottom: 16px,
-      $padding-left: 32px,
-      $padding-right: 24px,
-      $padding-top: 8px,
+      $padding-bottom: $padding-bottom,
+      $padding-left: $padding-left,
+      $padding-right: $padding-right,
+      $padding-top: $padding-top,
       $rtl-ordering: logical,
       $text-align: start,
       $text-indent: 0,
@@ -45,11 +58,11 @@
       $xul-box-orient: inherit
     );
     width: 100%;
-    border-bottom: 1px solid #E2E2E2;
-    transition: border-color 0.25s ease-in-out;
+    border-bottom: 1px solid $border-color;
+    transition: $transition;
 
     &::placeholder {
-      color: #ACACAC;
+      color: $placeholder-color;
     }
 
     &:focus {
@@ -58,7 +71,7 @@
         $outline-style: none,
         $outline-width: 3px
       );
-      border-bottom-color: #EB922F;
+      border-bottom-color: $border-color--focused;
     }
   }
 
@@ -77,6 +90,66 @@
 
     .form-field--has-value & {
       color: #2b2b2b;
+    }
+  }
+
+  &__textarea {
+    @include uads-textarea(
+      $appearance: textarea,
+      $background-color: $background-color,
+      $border-color: #4c4c4c,
+      $border-color--readonly: rgb(188, 188, 188),
+      $border-style: solid,
+      $border-width: 0,
+      $box-orient: vertical,
+      $color: inherit,
+      $cursor: auto,
+      $display: block,
+      $flex-direction: column,
+      $font-family: inherit,
+      $font-size: $font-size,
+      $font-weight: $font-weight,
+      $letter-spacing: normal,
+      $line-break: after-white-space,
+      $line-height: $line-height,
+      $margin-bottom: 0,
+      $margin-left: 0,
+      $margin-top: 0,
+      $margin-right: 0,
+      $nbsp-mode: space,
+      $opacity--disabled: 0.4,
+      $outline-offset--focus: -2px,
+      $padding-bottom: $padding-bottom,
+      $padding-left: $padding-left,
+      $padding-right: $padding-right,
+      $padding-top: $padding-top,
+      $resize: none,
+      $rtl-ordering: logical,
+      $text-align: start,
+      $text-indent: 0,
+      $text-shadow: none,
+      $text-transform: none,
+      $user-select: text,
+      $white-space: pre-wrap,
+      $word-spacing: normal,
+      $word-wrap: break-word,
+      $writing-mode: horizontal-tb
+    );
+    width: 100%;
+    border-bottom: 1px solid $border-color;
+    transition: $transition;
+
+    &::placeholder {
+      color: $placeholder-color;
+    }
+
+    &:focus {
+      @include uads--focus(
+        $outline-color: #1f5ccf,
+        $outline-style: none,
+        $outline-width: 3px
+      );
+      border-bottom-color: $border-color--focused;
     }
   }
 }
