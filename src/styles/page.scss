@@ -64,6 +64,7 @@
 
   &__content-container {
     @include pageContainer;
+    position: relative; // need "position: relative" for logout-button to be positioned correctly
   }
 
   &__footer {

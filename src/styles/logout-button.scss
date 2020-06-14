@@ -1,0 +1,16 @@
+.logout-button {
+  position: absolute;
+  top: 64px;
+  right: 36px;
+
+  @media (max-width: $bp-max-tablet) {
+    right: 0;
+  }
+
+  @media (max-width: $bp-max-mobile-landscape) {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
