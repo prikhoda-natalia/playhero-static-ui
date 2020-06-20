@@ -1,14 +1,25 @@
+/*
+  Note: size modifier is required on component's root element:
+    - game-list--big
+    - game-list--small
+*/
+
 .game-list {
   display: grid;
-  row-gap: 16px;
   height: 100%;
+
+  &--big {
+    row-gap: 24px;
+  }
+
+  &--small {
+    row-gap: 16px;
+  }
 
   &__item {
     background: #f0f;
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: 96px 24px, cover, cover;
     background-position: 50% 50%;
-    border-radius: 6px;
 
     &--call-of-duty {
       background-image: url("./assets/call-of-duty-logo.svg"),
@@ -26,6 +37,16 @@
       background-image: url("./assets/minecraft-logo.svg"),
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url("./assets/minecraft-card.jpg");
+    }
+
+    .game-list--big & {
+      background-size: 160px 40px, cover, cover;
+      border-radius: 10px;
+    }
+
+    .game-list--small & {
+      background-size: 96px 24px, cover, cover;
+      border-radius: 6px;
     }
   }
 }

@@ -1,0 +1,51 @@
+.hero-profile {
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__details {
+    width: 50%;
+  }
+
+  &__games {
+    width: 25%;
+    padding: 48px 12px;
+  }
+
+  &__purchase-box {
+    width: 25%;
+    padding: 48px 48px 48px 12px;
+  }
+
+  @media (max-width: $bp-max-tablet) {
+
+    &__details {
+      width: 100%;
+    }
+
+    &__games {
+      width: 100%;
+      padding: 48px;
+      height: 500px; // need fixed height for inner game-list component
+      order: 1; // need `order: 1` to position game-list after purchase-box
+    }
+  
+    &__purchase-box {
+      width: 100%;
+      padding: 0 48px;
+    }
+  }
+
+  @media (max-width: $bp-max-mobile-landscape) {
+
+    &__games {
+      padding: 24px 0 0;
+    }
+  
+    &__purchase-box {
+      padding: 24px 0;
+    }
+  }
+}

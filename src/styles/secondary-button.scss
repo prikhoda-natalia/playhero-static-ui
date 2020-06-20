@@ -1,5 +1,11 @@
 @import "_utils/uads";
 
+/*
+  Note: style modifier is required on component's root element:
+    - secondary-button--solid
+    - secondary-button--stroked
+*/
+
 .secondary-button {
   $button-views: (
     "solid": (
