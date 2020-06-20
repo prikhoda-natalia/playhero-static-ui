@@ -1,3 +1,4 @@
+document.getElementById("modal-backdrop").addEventListener("click", closeConfirmSaleModal);
 document.getElementById("close-modal-button").addEventListener("click", closeConfirmSaleModal);
 document.getElementById("purchase-submit-button").addEventListener("click", openConfirmSaleModal);
 
