@@ -1,3 +1,10 @@
+/*
+  Note: color modifier is required on component's tag element:
+    - profile-details__tag--green
+    - profile-details__tag--red
+    - profile-details__tag--transparent
+*/
+
 .profile-details {
   background: #fff;
   border-radius: 10px;
@@ -57,6 +64,16 @@
       font-size: 12px;
       line-height: 14px;
       background: #1EA26B;
+      border-radius: 5px;
+      color: #fff;
+    }
+
+    &--red {
+      padding: 4px 8px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      background: #CE3434;
       border-radius: 5px;
       color: #fff;
     }
