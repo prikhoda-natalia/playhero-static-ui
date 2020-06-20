@@ -13,6 +13,10 @@ const paths = {
   layouts: {
     srcFiles: `${cwd}/src/*.html`
   },
+  scripts: {
+    srcFiles: `${cwd}/src/scripts/*.js`,
+    distFolder: `${cwd}/dist/scripts`,
+  },
   srcFolder: `${cwd}/src`,
   styles: {
     srcFiles: `${cwd}/src/styles/*.scss`,

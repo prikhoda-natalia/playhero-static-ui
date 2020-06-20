@@ -1,5 +1,18 @@
 @import "_utils/uads";
 
+/*
+  Note: if component has "prefix" element - "has-prefix" modifier is required on component's root element:
+    - form-field--has-prefix
+*/
+/*
+  Note: if component is in invalid state - "is-invalid" modifier is required on component's root element:
+    - form-field--is-invalid
+*/
+/*
+  Note: if component has value - "has-value" modifier is required on component's root element:
+    - form-field--has-value
+*/
+
 .form-field {
   $background-color: #ffffff;
   $border-color: #E2E2E2;
@@ -8,8 +21,10 @@
   $font-weight: 300;
   $line-height: 19px;
   $padding-bottom: 16px;
-  $padding-left: 32px;
-  $padding-right: 32px;
+  $padding-left: 0;
+  $padding-left--with-prefix: 32px;
+  $padding-right: 0;
+  $padding-right--is-invalid: 32px;
   $padding-top: 8px;
   $placeholder-color: #ACACAC;
   $transition: border-color 0.25s ease-in-out;
@@ -61,8 +76,12 @@
     border-bottom: 1px solid $border-color;
     transition: $transition;
 
-    &::placeholder {
-      color: $placeholder-color;
+    .form-field--has-prefix & {
+      padding-left: $padding-left--with-prefix;
+    }
+    
+    .form-field--is-invalid & {
+      padding-right: $padding-right--is-invalid;
     }
 
     &:focus {
@@ -73,12 +92,16 @@
       );
       border-bottom-color: $border-color--focused;
     }
+
+    &::placeholder {
+      color: $placeholder-color;
+    }
   }
 
   &__invalid-icon {
     display: none;
 
-    .form-field--invalid & {
+    .form-field--is-invalid & {
       display: block;
     }
   }
@@ -160,8 +183,12 @@
     border-bottom: 1px solid $border-color;
     transition: $transition;
 
-    &::placeholder {
-      color: $placeholder-color;
+    .form-field--has-prefix & {
+      padding-left: $padding-left--with-prefix;
+    }
+    
+    .form-field--is-invalid & {
+      padding-right: $padding-right--is-invalid;
     }
 
     &:focus {
@@ -171,6 +198,10 @@
         $outline-width: 3px
       );
       border-bottom-color: $border-color--focused;
+    }
+
+    &::placeholder {
+      color: $placeholder-color;
     }
   }
 }

@@ -1,0 +1,141 @@
+@import "_utils/breakpoints";
+@import "_utils/uads";
+
+/*
+  Note: if component is in shown state - "is-shown" modifier is required on component's root element:
+    - modal--is-shown
+*/
+
+.modal {
+  display: none;
+
+  &--is-shown {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__backdrop {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+
+  &__close-button {
+    @include uads-button(
+      $align-items: center,
+      $appearance: none,
+      $background-color: transparent,
+      $border-color: #4c4c4c,
+      $border-style: solid,
+      $border-style--active: inset,
+      $border-style--active-disabled: inset,
+      $border-width: 0,
+      $box-align: center,
+      $box-sizing: border-box,
+      $color: inherit,
+      $color--active: inherit,
+      $color--disabled: GrayText,
+      $cursor: pointer,
+      $display: flex,
+      $font-family: inherit,
+      $font-size: 16px,
+      $font-style: normal,
+      $font-variant: normal,
+      $font-weight: inherit,
+      $letter-spacing: normal,
+      $line-height: inherit,
+      $margin-left: 0,
+      $margin-right: 0,
+      $margin-bottom: 0,
+      $margin-top: 0,
+      $outline-color--focus: #1f5ccf,
+      $outline-style--focus: auto,
+      $outline-width--focus: 3px,
+      $outline-offset--focus: 0,
+      $padding-top: 0,
+      $padding-right: 0,
+      $padding-bottom: 0,
+      $padding-left: 0,
+      $text-align: center,
+      $text-indent: 0,
+      $text-rendering: auto,
+      $text-shadow: none,
+      $text-transform: none,
+      $user-select: element,
+      $white-space: normal,
+      $word-spacing: normal,
+      $writing-mode: horizontal-tb
+    );
+    height: 44px;
+    width: 44px;
+    justify-content: center;
+    position: absolute;
+    top: 32px;
+    right: 24px;
+
+    svg {
+      width: 1em;
+      height: 1em;
+      display: flex;
+    }
+  }
+
+  &__content {
+    padding: 0 24px;
+    flex-grow: 1;
+  }
+
+  &__footer {
+    padding: 32px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__header {
+    padding: 48px 68px 32px 32px;
+  }
+
+  &__pane {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 375px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: $bp-max-mobile-landscape) {
+
+    &__backdrop {
+      background: transparent;
+    }
+
+    &__pane {
+      top: 84px; // need "top: 84px" to see page__header
+      height: calc(100% - 84px); // height depends in "top" value
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.book-session-form {
+  border: 1px solid #E2E2E2;
+  border-radius: 10px;
+
+  &__actions {
+    padding: 32px 24px 24px;
+  }
+
+  &__card-type {
+  
+    svg {
+      width: 48px;
+      display: flex;
+    }
+  }
+
+  &__fields {
+    padding: 0 24px;
+  }
+
+  &__header {
+    display: flex;
+    padding: 48px 32px 24px;
+  }
+
+  &__header-main {
+    flex-grow: 1;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    margin-top: 8px;
+  }
+
+  &__price-label {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
