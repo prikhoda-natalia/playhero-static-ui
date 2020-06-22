@@ -5,6 +5,10 @@
     - form-field--has-prefix
 */
 /*
+  Note: if component is in focused state - "is-focused" modifier is required on component's root element:
+    - form-field--is-focused
+*/
+/*
   Note: if component is in invalid state - "is-invalid" modifier is required on component's root element:
     - form-field--is-invalid
 */
@@ -19,6 +23,9 @@
   $border-color--focused: #EB922F;
   $font-size: 16px;
   $font-weight: 300;
+  $icon-color: #ACACAC;
+  $icon-color--has-value: #2b2b2b;
+  $icon-color--is-focused: #EB922F;
   $line-height: 19px;
   $padding-bottom: 16px;
   $padding-left: 0;
@@ -111,7 +118,7 @@
     top: 10px;
     left: 0;
     font-size: 16px;
-    color: #ACACAC;
+    color: $icon-color;
 
     svg {
       width: 1em;
@@ -120,7 +127,11 @@
     }
 
     .form-field--has-value & {
-      color: #2b2b2b;
+      color: $icon-color--has-value;
+    }
+    
+    .form-field--is-focused & {
+      color: $icon-color--is-focused;
     }
   }
 
