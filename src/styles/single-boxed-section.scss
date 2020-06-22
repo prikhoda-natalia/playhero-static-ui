@@ -9,14 +9,13 @@
 
   &__decor {
     flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
     padding-top: 64px;
     padding-left: 64px;
   }
 
   &__decor-image {
     width: 100%;
+    display: block;
   }
 
   @media (max-width: $bp-max-tablet) {
