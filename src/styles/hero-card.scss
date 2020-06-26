@@ -5,7 +5,7 @@
 
   &__avatar {
     width: 100%;
-    height: 158px;
+    height: 158px; // same height as .hero-card__games
     border-radius: 10px;
     overflow: hidden;
   }
@@ -32,6 +32,7 @@
   &__games {
     margin-left: 16px;
     width: 156px;
+    height: 158px; // same height as .hero-card__avatar
     flex-shrink: 0;
   }
 

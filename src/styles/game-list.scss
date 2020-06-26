@@ -16,37 +16,50 @@
     row-gap: 16px;
   }
 
+  &__background {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   &__item {
-    background: #f0f;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 50% 50%;
-
-    &--call-of-duty {
-      background-image: url("./assets/call-of-duty-logo.svg"),
-        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("./assets/call-of-duty-card.jpg");
-    }
-
-    &--fortnite {
-      background-image: url("./assets/fortnite-logo.svg"),
-        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("./assets/fortnite-card.jpg");
-    }
-
-    &--minecraft {
-      background-image: url("./assets/minecraft-logo.svg"),
-        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("./assets/minecraft-card.jpg");
-    }
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.4);
 
     .game-list--big & {
-      background-size: 160px 40px, cover, cover;
       border-radius: 10px;
     }
 
     .game-list--small & {
-      background-size: 96px 24px, cover, cover;
       border-radius: 6px;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+
+    svg {
+
+      .game-list--big & {
+        width: 160px;
+        height: 40px;
+      }
+  
+      .game-list--small & {
+        width: 96px;
+        height: 24px;
+      }
     }
   }
 }
