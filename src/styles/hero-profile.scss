@@ -11,6 +11,7 @@
 
   &__games {
     width: 25%;
+    height: 516px; // need fixed height for inner game-list component, equals to purchase-box's height and verstical paddings
     padding: 48px 12px;
   }
 
@@ -28,7 +29,6 @@
     &__games {
       width: 100%;
       padding: 48px;
-      height: 500px; // need fixed height for inner game-list component
       order: 1; // need `order: 1` to position game-list after purchase-box
     }
   
