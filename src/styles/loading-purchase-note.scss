@@ -1,0 +1,29 @@
+@import "_utils/placeholder-shimmer-mixin";
+
+.loading-purchase-note {
+  padding: 64px;
+  background: #fff;
+  border-radius: 10px;
+
+  &__content {
+    background: #E2E2E2; // background property has to be before placeholder-shimmer-mixin() as a fallback
+    @include placeholder-shimmer-mixin(#E2E2E2);
+    margin-top: 24px;
+    border-radius: 4px;
+    width: 100%;
+    height: 12px;
+  }
+
+  &__title {
+    background: #ACACAC; // background property has to be before placeholder-shimmer-mixin() as a fallback
+    @include placeholder-shimmer-mixin(#ACACAC);
+    border-radius: 4px;
+    width: 188px;
+    height: 12px;
+  }
+
+  @media (max-width: $bp-max-mobile-landscape) {
+    border-radius: 0;
+    padding: 0;
+  }
+}

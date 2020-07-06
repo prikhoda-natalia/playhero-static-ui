@@ -1,0 +1,197 @@
+@import "_utils/placeholder-shimmer-mixin";
+
+.loading-hero-profile {
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__avatar {
+    background: #E2E2E2; // background property has to be before placeholder-shimmer-mixin() as a fallback
+    @include placeholder-shimmer-mixin(#E2E2E2);
+    width: 165px;
+    height: 420px; // equals to purchase-box's height on Hero Profile page
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  &__button {
+    background: #ACACAC; // background property has to be before placeholder-shimmer-mixin() as a fallback
+    @include placeholder-shimmer-mixin(#ACACAC);
+    border-radius: 10px;
+    width: 100%;
+    height: 43px;
+  }
+
+  &__card-type-image {
+    margin: 8px;
+  
+    svg {
+      width: 48px;
+      display: flex;
+    }
+  }
+
+  &__card-type-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__content {
+    margin-left: 48px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__details {
+    width: 50%;
+    padding: 48px;
+    display: flex;
+  }
+
+  &__game {
+    background: #E2E2E2; // background property has to be before placeholder-shimmer-mixin() as a fallback
+    @include placeholder-shimmer-mixin(#E2E2E2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__game-logo {
+    background: #FFFFFF;
+    border-radius: 4px;
+    width: 136px;
+    height: 12px;
+  }
+
+  &__games {
+    width: 25%;
+    height: 516px; // need fixed height for inner game-list component, equals to purchase-box's height and verstical paddings
+    padding: 48px 12px;
+    display: grid;
+    row-gap: 24px;
+  }
+
+  &__header {
+    padding: 24px 0 0;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 166px;
+      background: #E2E2E2;
+      margin-top: 24px
+    }
+  }
+
+  &__name {
+    background: #ACACAC; // background property has to be before placeholder-shimmer-mixin() as a fallback
+    @include placeholder-shimmer-mixin(#ACACAC);
+    border-radius: 4px;
+    width: 188px;
+    height: 12px;
+  }
+
+  &__price-line {
+    background: #E2E2E2; // background property has to be before placeholder-shimmer-mixin() as a fallback
+    @include placeholder-shimmer-mixin(#E2E2E2);
+    margin: 8px 0;
+    width: 136px;
+    height: 12px;
+    border-radius: 4px;
+  }
+
+  &__purchase-box {
+    width: 25%;
+    padding: 48px 48px 48px 12px;
+  }
+
+  &__purchase-box-container {
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
+    padding: 24px;
+  }
+
+  &__purchase-box-content {
+    margin: 94px 0 82px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__tag {
+    background: #E2E2E2; // background property has to be before placeholder-shimmer-mixin() as a fallback
+    @include placeholder-shimmer-mixin(#E2E2E2);
+    margin-top: 16px;
+    border-radius: 4px;
+    width: 136px;
+    height: 12px;
+  }
+
+  &__text {
+    background: #E2E2E2; // background property has to be before placeholder-shimmer-mixin() as a fallback
+    @include placeholder-shimmer-mixin(#E2E2E2);
+    margin-top: 16px;
+    border-radius: 4px;
+    width: 136px;
+    height: 12px;
+  }
+
+  @media (max-width: $bp-max-tablet) {
+
+    &__details {
+      width: 100%;
+    }
+
+    &__games {
+      width: 100%;
+      padding: 48px;
+      order: 1; // need `order: 1` to position game-list after purchase-box
+    }
+  
+    &__purchase-box {
+      width: 100%;
+      padding: 0 48px;
+    }
+  }
+
+  @media (max-width: $bp-max-mobile-landscape) {
+
+    &__avatar {
+      width: 100%;
+      height: 200px;
+    }
+
+    &__content {
+      margin-left: 0;
+      margin-top: 40px;
+    }
+
+    &__details {
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+    }
+
+    &__games {
+      padding: 24px 0 0;
+    }
+
+    &__header {
+      padding-top: 0;
+    }
+  
+    &__purchase-box {
+      padding: 24px 0;
+    }
+
+    &__text {
+      width: 100%;
+    }
+  }
+}

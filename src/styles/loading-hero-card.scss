@@ -1,0 +1,80 @@
+@import "_utils/placeholder-shimmer-mixin";
+
+.loading-hero-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+  
+  &__avatar {
+    background: #E2E2E2; // background property has to be before placeholder-shimmer-mixin() as a fallback
+    @include placeholder-shimmer-mixin(#E2E2E2);
+    width: 100%;
+    height: 158px; // same height as .loading-hero-card__game
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__description {
+    background: #E2E2E2; // background property has to be before placeholder-shimmer-mixin() as a fallback
+    @include placeholder-shimmer-mixin(#E2E2E2);
+    border-radius: 4px;
+    width: 136px;
+    height: 12px;
+  }
+
+  &__details {
+    margin-top: 16px;
+  }
+
+  &__game {
+    background: #E2E2E2; // background property has to be before placeholder-shimmer-mixin() as a fallback
+    @include placeholder-shimmer-mixin(#E2E2E2);
+    margin-left: 16px;
+    width: 156px;
+    height: 158px; // same height as .loading-hero-card__avatar
+    flex-shrink: 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+  }
+
+  &__game-logo {
+    background: #FFFFFF;
+    border-radius: 4px;
+    height: 12px;
+    width: 100%;
+  }
+
+  &__media {
+    display: flex;
+  }
+
+  &__name {
+    background: #ACACAC; // background property has to be before placeholder-shimmer-mixin() as a fallback
+    @include placeholder-shimmer-mixin(#ACACAC);
+    border-radius: 4px;
+    height: 12px;
+    width: 188px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: $bp-max-tablet) {
+    &__avatar {
+      width: 100%;
+    }
+    &__game {
+      display: none;
+    }
+  }
+
+  @media (max-width: $bp-max-mobile-landscape) {
+    padding: 0;
+
+    &__game {
+      display: flex;
+      width: 110px;
+    }
+  }
+}

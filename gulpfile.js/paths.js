@@ -19,7 +19,7 @@ const paths = {
   },
   srcFolder: `${cwd}/src`,
   styles: {
-    srcFiles: `${cwd}/src/styles/*.scss`,
+    srcFiles: `${cwd}/src/styles/**/*.scss`,
     srcMainFile: `${cwd}/src/styles/index.scss`,
     relativeSrcFolder: `src/styles`
   }
