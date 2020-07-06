@@ -1,10 +1,10 @@
 {
-  "name": "playhero-statis-ui",
+  "name": "playhero-static-ui",
   "version": "1.0.0",
   "description": "Static UI for Playhero website",
   "main": "index.html",
   "repository": "https://github.com/prikhoda-natalia/playhero-statis-ui",
-  "author": "Natalia Prikhoda",
+  "author": "Natalia Prikhoda <prikhoda.natalia.webdev@gmail.com>",
   "license": "MIT",
   "private": true,
   "devDependencies": {
