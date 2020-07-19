@@ -36,8 +36,20 @@
   $placeholder-color: #ACACAC;
   $transition: border-color 0.25s ease-in-out;
 
-  padding-bottom: 8px;
+  margin-bottom: 8px;
   position: relative;
+  border-bottom: 1px solid $border-color;
+
+  &:last-child {
+    border: 0;
+  }
+  &:first-child:last-child {
+    border-bottom: 1px solid $border-color;
+  }
+
+  &--is-focused {
+    border-bottom-color: $border-color--focused;
+  }
 
   &__input {
     @include uads-input(
@@ -80,7 +92,6 @@
       $xul-box-orient: inherit
     );
     width: 100%;
-    border-bottom: 1px solid $border-color;
     transition: $transition;
 
     .form-field--has-prefix & {
@@ -97,7 +108,6 @@
         $outline-style: none,
         $outline-width: 3px
       );
-      border-bottom-color: $border-color--focused;
     }
 
     &::placeholder {
@@ -191,7 +201,6 @@
       $writing-mode: horizontal-tb
     );
     width: 100%;
-    border-bottom: 1px solid $border-color;
     transition: $transition;
 
     .form-field--has-prefix & {
@@ -208,7 +217,6 @@
         $outline-style: none,
         $outline-width: 3px
       );
-      border-bottom-color: $border-color--focused;
     }
 
     &::placeholder {
