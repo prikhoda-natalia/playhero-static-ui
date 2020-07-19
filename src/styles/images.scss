@@ -1,0 +1,122 @@
+$images-max-width: 1312px;
+$images-item-height: $images-max-width / 6;
+
+@mixin set-image-size($coef: 1) {
+  height: $images-item-height;
+  width: $coef * $images-item-height;
+  z-index: 600 - ($coef * 100);
+}
+
+.images {
+
+  &__wrapper {
+    position: relative;
+    height: $images-item-height + 100px;
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  &__label {
+    font-size: 12px;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    transform: rotateZ(-45deg);
+    transform-origin: left;
+    white-space: nowrap;
+
+    .images__wrapper:hover & {
+      display: none;
+    }
+    .images__item:hover > & {
+      display: block;
+    }
+  }
+
+  &__title {
+    margin: 1em 0 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &__item {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    border: 1px solid #2b2b2b;
+    background: rgba(0,0,0,0.05);
+
+    .images__wrapper:hover & {
+      opacity: 0.5;
+    }
+    .images__wrapper:hover > &:hover {
+      opacity: 1;
+      background: rgba(0,0,0,0.1);
+    }
+
+    &--game-list-hero-item-1-bg {
+      &_desktop-max { @include set-image-size(0.72); }
+      &_desktop-min { @include set-image-size(0.5); }
+      &_mobile-max { @include set-image-size(1.46); }
+      &_mobile-min { @include set-image-size(0.63); }
+      &_tablet-max { @include set-image-size(1.65); }
+      &_tablet-min { @include set-image-size(1.11); }
+    }
+
+    &--game-list-home-item-1-bg {
+      &_desktop { @include set-image-size(0.99); }
+      &_mobile { @include set-image-size(0.7); }
+    }
+
+    &--game-list-hero-item-2-bg {
+      &_desktop-max { @include set-image-size(1.54); }
+      &_desktop-min { @include set-image-size(1.07); }
+      &_mobile-max { @include set-image-size(3.07); }
+      &_mobile-min { @include set-image-size(1.33); }
+      &_tablet-max { @include set-image-size(3.49); }
+      &_tablet-min { @include set-image-size(2.36); }
+    }
+
+    &--game-list-home-item-2-bg {
+      &_desktop { @include set-image-size(2.2); }
+      &_mobile { @include set-image-size(1.55); }
+    }
+
+    &--game-list-hero-item-3-bg {
+      &_desktop-max { @include set-image-size(2.45); }
+      &_desktop-min { @include set-image-size(1.71); }
+      &_mobile-max { @include set-image-size(4.86); }
+      &_mobile-min { @include set-image-size(2.11); }
+      &_tablet-max { @include set-image-size(5.57); }
+      &_tablet-min { @include set-image-size(3.77); }
+    }
+
+    &--game-list-home-item-3-bg {
+      &_desktop { @include set-image-size(2.62); }
+      &_mobile { @include set-image-size(3.71); }
+    }
+
+    &--hero-card-avatar {
+      &_desktop { @include set-image-size(1.27); }
+      &_mobile-max { @include set-image-size(3.75); }
+      &_mobile-min { @include set-image-size(1.18); }
+      &_tablet-max { @include set-image-size(2.12); }
+      &_tablet-min { @include set-image-size(1.2); }
+    }
+
+    &--profile-details-avatar {
+      &_mobile-max { @include set-image-size(3.6); }
+      &_mobile-min { @include set-image-size(1.56); }
+      &_desktop-tablets { @include set-image-size(0.39); }
+    }
+
+    &--promo-media-bg {
+      &_desktop-max { @include set-image-size(3.78); }
+      &_desktop-min { @include set-image-size(2.72); }
+      &_mobile-tablets-max { @include set-image-size(4.26); }
+      &_mobile-tablets-min { @include set-image-size(1.56); }
+    }
+  }
+}
