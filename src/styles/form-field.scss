@@ -44,7 +44,7 @@
       $appearance: textfield,
       $background-color: $background-color,
       $border-color: #4c4c4c,
-      $border-color--readonly: rgb(188, 188, 188),
+      $border-color--readonly: $border-color,
       $border-radius: 0,
       $border-style: solid,
       $border-width: 0,
