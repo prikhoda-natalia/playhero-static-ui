@@ -4,6 +4,8 @@
     - game-list--small
 */
 
+@import "_utils/breakpoints";
+
 .game-list {
   display: grid;
   height: 100%;
@@ -59,6 +61,24 @@
       .game-list--small & {
         width: 96px;
         height: 24px;
+      }
+    }
+  }
+
+  @media (max-width: $bp-max-tablet) {
+    &__item {
+  
+      .game-list--big & {
+        height: 124px;
+      }
+    }
+  }
+
+  @media (max-width: $bp-max-mobile-landscape) {
+    &__item {
+  
+      .game-list--big & {
+        height: 148px;
       }
     }
   }

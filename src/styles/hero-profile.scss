@@ -29,6 +29,7 @@
     &__games {
       width: 100%;
       padding: 48px;
+      height: auto;
       order: 1; // need `order: 1` to position game-list after purchase-box
     }
   
