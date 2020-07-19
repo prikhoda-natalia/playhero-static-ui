@@ -115,8 +115,10 @@ $images-item-height: $images-max-width / 6;
     &--promo-media-bg {
       &_desktop-max { @include set-image-size(3.78); }
       &_desktop-min { @include set-image-size(2.72); }
-      &_mobile-tablets-max { @include set-image-size(4.26); }
-      &_mobile-tablets-min { @include set-image-size(1.56); }
+      &_mobile-max { @include set-image-size(3.6); }
+      &_mobile-min { @include set-image-size(1.56); }
+      &_tablets-max { @include set-image-size(4.26); }
+      &_tablets-min { @include set-image-size(3.14); }
     }
   }
 }
