@@ -1,0 +1,26 @@
+.purchase-cta {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+
+  &__actions {
+    width: 50%;
+  }
+  &__content {
+    width: 50%;
+    padding: 0 16px;
+  }
+  &__price {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 4px;
+    color: #000000;
+  }
+  &__price-note {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #ACACAC;
+  }
+}

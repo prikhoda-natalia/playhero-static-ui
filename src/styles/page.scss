@@ -154,7 +154,7 @@
   @media (max-width: $bp-max-mobile-landscape) {
     &__content {
       background: #ffffff;
-      padding: 108px 0 98px;
+      padding: 108px 0 175px; // top and bottom spacing are calculated from fixed headers and toolbar's heights and standard spacing of 24px. Toolbar's height is taken from Hero Profile page to include toolbar menu and purchase cta components
     }
 
     &__content-container {
@@ -189,10 +189,20 @@
       position: fixed;
       bottom: 0;
       width: 100%;
+      background: #ffffff;
+      box-shadow: 0px 0px 10px rgba(201, 200, 200, 0.5);
     }
 
     &__mobile-toolbar-cta {
-      padding: 24px;
+      &::after {
+        content: "";
+        display: block;
+        width: calc(100% - 48px);
+        height: 1px;
+        background: #e2e2e2;
+        position: relative;
+        left: 24px;
+      }
     }
   }
 }
