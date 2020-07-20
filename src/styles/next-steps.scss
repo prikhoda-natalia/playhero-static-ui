@@ -2,6 +2,7 @@
   padding: 64px;
   background: #fff;
   border-radius: 10px;
+  height: 100%;
 
   &__icon {
     margin-right: 24px;
@@ -17,8 +18,8 @@
 
   &__item-content {
     font-weight: 300;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 18px;
+    line-height: 21px;
   }
 
   &__list-item {
