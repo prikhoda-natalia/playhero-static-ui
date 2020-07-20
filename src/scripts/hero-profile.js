@@ -1,6 +1,7 @@
 document.getElementById("modal-backdrop").addEventListener("click", closeConfirmSaleModal);
 document.getElementById("close-modal-button").addEventListener("click", closeConfirmSaleModal);
 document.getElementById("purchase-submit-button").addEventListener("click", openConfirmSaleModal);
+document.getElementById("purchase-submit-button-cta").addEventListener("click", openConfirmSaleModal);
 
 function closeConfirmSaleModal() {
   const confirmSaleModal = document.getElementById("confirm-sale-modal");

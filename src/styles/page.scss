@@ -133,7 +133,7 @@
     display: block;
   }
 
-  &__mobile-menu {
+  &__mobile-toolbar {
     display: none;
   }
 
@@ -185,14 +185,16 @@
       height: 36px;
     }
 
-    &__mobile-menu {
+    &__mobile-toolbar {
       display: block;
       color: #acacac;
-      background: #ffffff;
-      box-shadow: 0px 0px 10px rgba(201, 200, 200, 0.5);
       position: fixed;
       bottom: 0;
       width: 100%;
+    }
+
+    &__mobile-toolbar-cta {
+      padding: 24px;
     }
   }
 }
