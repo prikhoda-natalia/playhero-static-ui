@@ -12,6 +12,19 @@
   flex-direction: column;
   min-height: 100vh;
 
+  &__beta-badge {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 300;
+    color: #EB922F;
+    border-radius: 10px;
+    border: 1px solid #EB922F;
+    padding: 8px 16px;
+    margin-left: 24px;
+    top: 2px;
+    position: relative;
+  }
+
   &__contact {
     @include uads-a(
       $color: #ffffff,
@@ -127,6 +140,7 @@
       $user-select: element
     );
     display: flex;
+    align-items: center;
   }
 
   &__logo-image {
