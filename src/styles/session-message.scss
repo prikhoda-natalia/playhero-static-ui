@@ -1,0 +1,120 @@
+.session-message {
+    padding: 64px;
+    background: #fff;
+    border-radius: 10px;
+
+    &__content {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    &__header {
+        display: flex;
+        padding: 0 0 48px;
+        position: relative;
+    
+        &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 166px;
+            background: #E2E2E2;
+            position: absolute;
+            bottom: 24px;
+            left: 0;
+        }
+    }
+
+    &__header-main {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 42px;
+        color: #2B2B2B;
+    }
+
+    &__tag {
+        margin-right: 12px;
+        margin-top: 8px;
+    
+        &:last-child {
+            margin-right: 0;
+        }
+  
+        &--green {
+            padding: 4px 8px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            background: #1EA26B;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        &--status_confirmed,
+        &--status_pending,
+        &--status_unavailable {
+            padding: 4px 8px;
+            border-radius: 5px;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        &--status_unavailable {
+            background: #CE3434;
+        }
+
+        &--status_confirmed {
+            background: #1EA26B;
+        }
+
+        &--status_pending {
+            background: #ACACAC;
+        }
+    
+        &--type {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: #ACACAC;
+        }
+    }
+
+    &__tag-list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__warning {
+        background: rgba(235, 146, 47, 0.2);
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #EB922F;
+        padding: 16px 16px 16px 48px;
+        margin-bottom: 24px;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 48px;
+            height: 100%;
+            background-image: url(./assets/icons/info.svg);
+            background-repeat: no-repeat;
+            background-size: 16px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-position: 50% 50%;
+        }
+    }
+}
