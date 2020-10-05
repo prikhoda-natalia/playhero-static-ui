@@ -1,0 +1,9 @@
+.hero-scheduling {
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+
+    &__steps {
+        flex-grow: 1;
+    }
+}
