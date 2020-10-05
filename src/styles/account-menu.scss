@@ -1,0 +1,60 @@
+.account-menu {
+    display: flex;
+
+    &__aside {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__main-link {
+        @include uads-a(
+            $color: #2B2B2B,
+            $color--active: #2B2B2B,
+            $color--active-link: #2B2B2B,
+            $color--active-visited: #2B2B2B,
+            $color--visited: #2B2B2B,
+            $cursor: pointer,
+            $outline-color--active-link: currentColor,
+            $outline-style--active-link: none,
+            $outline-width--active-link: 1px,
+            $outline-color--active-visited: currentColor,
+            $outline-style--active-visited: none,
+            $outline-width--active-visited: 1px,
+            $outline-color--focus: currentColor,
+            $outline-style--focus: none,
+            $outline-width--focus: 1px,
+            $text-decoration: none,
+            $user-focus: normal,
+            $user-select: element
+        );
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 12px 41px;
+
+        &--active {
+            background: #FFFFFF;
+        }
+    }
+
+    &__main-menu {
+        @include uads-ul(
+          $counter-reset: -html-counter 0,
+          $display: flex,
+          $list-style-position: outside,
+          $list-style-type: none,
+          $margin-bottom: 0,
+          $margin-left: 0,
+          $margin-right: 0,
+          $margin-top: 0,
+          $padding-bottom: 0,
+          $padding-left: 0,
+          $padding-right: 0,
+          $padding-top: 0
+        );
+        align-items: center;
+    }
+}

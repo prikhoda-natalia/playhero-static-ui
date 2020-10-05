@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Account | Playhero</title>
+    <title>User Account Details | Playhero</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
@@ -44,8 +44,18 @@
       </div>
       <div class="page__content">
         <div class="page__content-container">
-          <div class="logout-button">
-            <button class="secondary-button secondary-button--stroked" type="button">Log Out</button>
+          <div class="account-menu">
+            <ul class="account-menu__main-menu">
+              <li class="account-menu__main-item">
+                <a class="account-menu__main-link" href="/">My Sessions</a>
+              </li>
+              <li class="account-menu__main-item">
+                <a aria-current="page" class="account-menu__main-link account-menu__main-link--active" href="/">My Details</a>
+              </li>
+            </ul>
+            <div class="account-menu__aside">
+              <button class="secondary-button secondary-button--stroked" type="button">Log Out</button>
+            </div>
           </div>
           <div class="single-boxed-section">
             <div class="single-boxed-section__box">
