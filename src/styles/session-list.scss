@@ -58,7 +58,8 @@
     margin-right: 16px;
 
     &--status_confirmed,
-    &--status_pending {
+    &--status_pending,
+    &--status_unavailable {
       padding: 4px 8px;
       border-radius: 5px;
       color: #ffffff;
@@ -73,6 +74,10 @@
 
     &--status_pending {
       background: #ACACAC;
+    }
+
+    &--status_unavailable {
+      background: #CE3434;
     }
 
     &--time {
