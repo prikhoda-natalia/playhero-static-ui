@@ -78,6 +78,16 @@
                 border-radius: 4px;
             }
         }
+
+        &--selected {
+            background: #1EA26B;
+            border-color: #1EA26B;
+            color: #fff;
+
+            &:active {
+                color: #fff;
+            }
+        }
     }
 
     &__timezone {
