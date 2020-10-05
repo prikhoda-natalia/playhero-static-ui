@@ -1,3 +1,30 @@
+@mixin scheduling-steps-progress-bar($is-first: false, $is-last: false) {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -4px; // negative of border's height
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #EB922F;
+    border-radius: 10px;
+
+    @if $is-first {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    } @else {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    @if $is-last {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    } @else {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
 .scheduling-steps {
     display: flex;
     width: 100%;
@@ -42,23 +69,63 @@
         }
 
         &--active {
-            &::before {
+
+            &:first-child {
+                &::before {
+                    @include scheduling-steps-progress-bar($is-first: true, $is-last: true);
+                }
+            }
+            &:not(:first-child) {
+                &::before {
+                    @include scheduling-steps-progress-bar($is-first: false, $is-last: true);
+                }
+            }
+        }
+
+        &--complete {
+            pointer-events: none;
+            z-index: 99;
+            margin-right: 0;
+            padding-right: 64px;
+            box-sizing: content-box;
+
+            &:first-child:last-child {
+                &::before {
+                    @include scheduling-steps-progress-bar($is-first: true, $is-last: true);
+                }
+            }
+            &:first-child:not(:last-child) {
+                &::before {
+                    @include scheduling-steps-progress-bar($is-first: true, $is-last: false);
+                }
+            }
+            &:last-child:not(:first-child) {
+                &::before {
+                    @include scheduling-steps-progress-bar($is-first: false, $is-last: true);
+                }
+            }
+            &:not(:first-child):not(:last-child) {
+                &::before {
+                    @include scheduling-steps-progress-bar($is-first: true, $is-last: false);
+                }
+            }
+
+            &::after {
                 content: "";
                 display: block;
                 position: absolute;
-                top: -4px; // negative of border's height
+                top: 0;
                 left: 0;
                 width: 100%;
-                height: 4px;
-                background: #EB922F;
-                border-radius: 10px;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.5);
+                z-index: 99;
             }
         }
 
         &--disabled {
             pointer-events: none;
             z-index: 99;
-            position: relative;
 
             &::after {
                 content: "";
