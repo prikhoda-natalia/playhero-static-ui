@@ -6,7 +6,7 @@
 
     &__additional {
         margin-top: 24px;
-        padding: 24px;
+        padding: 24px 0;
     }
 
     &__additional-message {
@@ -15,6 +15,7 @@
         font-size: 16px;
         line-height: 19px;
         text-align: center;
+        padding: 0 24px;
     }
 
     &__additional-title {
@@ -22,6 +23,7 @@
         font-size: 16px;
         line-height: 19px;
         text-align: center;
+        padding: 0 24px;
     }
     
     &__game {
