@@ -58,6 +58,7 @@
 
         &--status_confirmed,
         &--status_pending,
+        &--status_previous,
         &--status_unavailable {
             padding: 4px 8px;
             border-radius: 5px;
@@ -67,16 +68,20 @@
             line-height: 14px;
         }
 
-        &--status_unavailable {
-            background: #CE3434;
-        }
-
         &--status_confirmed {
             background: #1EA26B;
         }
 
         &--status_pending {
             background: #ACACAC;
+        }
+
+        &--status_previous {
+            background: #ACACAC;
+        }
+
+        &--status_unavailable {
+            background: #CE3434;
         }
     
         &--type {

@@ -59,6 +59,7 @@
 
     &--status_confirmed,
     &--status_pending,
+    &--status_previous,
     &--status_unavailable {
       padding: 4px 8px;
       border-radius: 5px;
@@ -73,6 +74,10 @@
     }
 
     &--status_pending {
+      background: #ACACAC;
+    }
+
+    &--status_previous {
       background: #ACACAC;
     }
 
