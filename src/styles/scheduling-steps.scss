@@ -1,13 +1,14 @@
 .scheduling-steps {
     display: flex;
+    width: 100%;
     position: relative;
-    padding: 24px 64px 24px 24px;
+    padding: 28px 64px 24px 24px;
 
     &::before {
         content: "";
         display: block;
         position: absolute;
-        top: 24px;
+        top: 24px; // subtract border's height from padding-top
         left: 24px;
         width: calc(100% - 88px);
         height: 4px;
@@ -27,17 +28,25 @@
     }
 
     &__step {
-        padding: 24px;
+        padding: 24px 0;
         position: relative;
-        flex-grow: 1;
-        flex-basis: 0;
+        margin-right: 64px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--fixed {
+            width: 300px;
+            flex-shrink: 0;
+        }
 
         &--active {
             &::before {
                 content: "";
                 display: block;
                 position: absolute;
-                top: 0;
+                top: -4px; // negative of border's height
                 left: 0;
                 width: 100%;
                 height: 4px;
