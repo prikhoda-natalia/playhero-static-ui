@@ -106,7 +106,7 @@
             }
             &:not(:first-child):not(:last-child) {
                 &::before {
-                    @include scheduling-steps-progress-bar($is-first: true, $is-last: false);
+                    @include scheduling-steps-progress-bar($is-first: false, $is-last: false);
                 }
             }
 
