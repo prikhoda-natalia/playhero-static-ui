@@ -1,0 +1,85 @@
+/**
+Overrides for calendar plugin for Vue.js - https://vcalendar.io/
+**/
+
+/**
+Note: We have to use id here to surpass specificity coefficient from Vue unique identifier attribute
+**/
+
+#playhero-vcalendar {
+    &.vc-container {
+        --arrows-padding: 8px 0;
+        --day-content-bg-color-hover: transparent;
+        --day-content-bg-color-focus: transparent;
+        --day-content-height: 32px;
+        --day-content-margin: 0;
+        --day-content-width: 32px;
+        --header-padding: 8px 0;
+        --highlight-height: 32px;
+        --title-padding: 0 8px 0 0;
+        --weekday-padding: 8px 0 12px;
+        --weeks-padding: 0;
+        border: 0; // reset .vc-border on .vc-container element
+        font-family: inherit;
+    }
+
+    .vc-svg-icon {
+        height: 15px; // subtract button's border 2*2px from title's line-height 19px
+    }
+
+    .vc-title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #2B2B2B;
+    }
+
+    .vc-weekday {
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 12px;
+        color: #2B2B2B;
+        text-transform: uppercase;
+    }
+
+    .vc-weeks {
+        gap: 12px !important; // need !important to override inline style on .vc-weeks element
+    }
+
+    /**
+        Styles for custom elements of vcalendar
+    **/
+    .playhero-vcalendar {
+        &__day-bg {
+            background-color: transparent; // reset .vc-bg-blue-200 on .vc-highlight element
+
+            &--available {
+                background: rgba(235, 146, 47, 0.2);
+            }
+
+            &--selected {
+                background: #EB922F;
+            }
+        }
+    
+        &__day-content {
+            color: #ACACAC; // reset .vc-text-blue-900 on .vc-day-content element
+            font-weight: 300; // reset .vc-font-bold on .vc-day-content element
+            font-size: 16px; // reset .vc-text-sm on .vc-day-content element
+            line-height: 19px;
+            pointer-events: none;
+
+            &--available {
+                color: #EB922F;
+                font-weight: 500;
+                pointer-events: inherit;
+            }
+
+            &--selected {
+                color: #ffffff;
+                font-weight: 500;
+                pointer-events: inherit;
+            }
+        }
+    }
+}

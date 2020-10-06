@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Home - Loading | Playhero</title>
+    <title>User Account Details - Complete | Playhero</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
@@ -44,98 +44,57 @@
       </div>
       <div class="page__content">
         <div class="page__content-container">
-          <div class="promo-media promo-media--fortnite">
-            <div class="promo-media__text">
-              Play your <b>hero</b> on your favourite game.
+          <div class="account-menu">
+            <ul class="account-menu__main-menu">
+              <li class="account-menu__main-item">
+                <a class="account-menu__main-link" href="/">My Sessions</a>
+              </li>
+              <li class="account-menu__main-item">
+                <a aria-current="page" class="account-menu__main-link account-menu__main-link--active" href="/">My Details</a>
+              </li>
+            </ul>
+            <div class="account-menu__aside">
+              <button class="secondary-button secondary-button--stroked" type="button">Log Out</button>
             </div>
           </div>
-          <div class="card-list">
-            <div class="card-list__title">Active <b>Heroes</b></div>
-            <div class="card-list__content">
-              <div class="card-list__content-item">
-                <div class="loading-hero-card">
-                  <div class="loading-hero-card__media">
-                    <div class="loading-hero-card__avatar"></div>
-                    <div class="loading-hero-card__game">
-                      <div class="loading-hero-card__game-logo"></div>
+          <div class="single-boxed-section">
+            <div class="single-boxed-section__box">
+              <div class="form-box">
+                <div class="form-box__title"><b>Your</b> Details</div>
+                <div class="form-box__fields">
+                  <div class="form-field form-field--has-prefix form-field--has-value">
+                    <div class="form-field__prefix">
+                      <!-- START: field-avatar.svg -->
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.6666 15.3333V13.5556C14.6666 12.6126 14.3154 11.7082 13.6903 11.0414C13.0652 10.3746 12.2173 10 11.3333 10H4.66659C3.78253 10 2.93468 10.3746 2.30956 11.0414C1.68444 11.7082 1.33325 12.6126 1.33325 13.5556V15.3333" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7.99984 7.33333C9.84079 7.33333 11.3332 5.84095 11.3332 4C11.3332 2.15905 9.84079 0.666664 7.99984 0.666664C6.15889 0.666664 4.6665 2.15905 4.6665 4C4.6665 5.84095 6.15889 7.33333 7.99984 7.33333Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <!-- END: field-avatar.svg -->
                     </div>
+                    <input type="text" class="form-field__input" placeholder="Full Name" value="New Full Name" required />
                   </div>
-                  <div class="loading-hero-card__details">
-                    <div class="loading-hero-card__name"></div>
-                    <div class="loading-hero-card__description"></div>
+                  <div class="form-field form-field--has-prefix">
+                    <div class="form-field__prefix">
+                      <!-- START: field-email.svg -->
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.13335 2H13.8667C14.6734 2 15.3334 2.675 15.3334 3.5V12.5C15.3334 13.325 14.6734 14 13.8667 14H2.13335C1.32669 14 0.666687 13.325 0.666687 12.5V3.5C0.666687 2.675 1.32669 2 2.13335 2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.3334 3.5L8.00002 8.75L0.666687 3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <!-- END: field-email.svg -->
+                    </div>
+                    <input type="email" class="form-field__input" placeholder="Email Address" required />
                   </div>
                 </div>
-              </div>
-              <div class="card-list__content-item">
-                <div class="loading-hero-card">
-                  <div class="loading-hero-card__media">
-                    <div class="loading-hero-card__avatar"></div>
-                    <div class="loading-hero-card__game">
-                      <div class="loading-hero-card__game-logo"></div>
-                    </div>
-                  </div>
-                  <div class="loading-hero-card__details">
-                    <div class="loading-hero-card__name"></div>
-                    <div class="loading-hero-card__description"></div>
-                  </div>
+                <div class="form-box__secondary-actions">
+                  <a href="#">Change password?</a>
+                </div>
+                <div class="form-box__actions">
+                  <button class="primary-button primary-button--solid" type="submit">Save</button>
                 </div>
               </div>
-              <div class="card-list__content-item">
-                <div class="loading-hero-card">
-                  <div class="loading-hero-card__media">
-                    <div class="loading-hero-card__avatar"></div>
-                    <div class="loading-hero-card__game">
-                      <div class="loading-hero-card__game-logo"></div>
-                    </div>
-                  </div>
-                  <div class="loading-hero-card__details">
-                    <div class="loading-hero-card__name"></div>
-                    <div class="loading-hero-card__description"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-list__content-item">
-                <div class="loading-hero-card">
-                  <div class="loading-hero-card__media">
-                    <div class="loading-hero-card__avatar"></div>
-                    <div class="loading-hero-card__game">
-                      <div class="loading-hero-card__game-logo"></div>
-                    </div>
-                  </div>
-                  <div class="loading-hero-card__details">
-                    <div class="loading-hero-card__name"></div>
-                    <div class="loading-hero-card__description"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-list__content-item">
-                <div class="loading-hero-card">
-                  <div class="loading-hero-card__media">
-                    <div class="loading-hero-card__avatar"></div>
-                    <div class="loading-hero-card__game">
-                      <div class="loading-hero-card__game-logo"></div>
-                    </div>
-                  </div>
-                  <div class="loading-hero-card__details">
-                    <div class="loading-hero-card__name"></div>
-                    <div class="loading-hero-card__description"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-list__content-item">
-                <div class="loading-hero-card">
-                  <div class="loading-hero-card__media">
-                    <div class="loading-hero-card__avatar"></div>
-                    <div class="loading-hero-card__game">
-                      <div class="loading-hero-card__game-logo"></div>
-                    </div>
-                  </div>
-                  <div class="loading-hero-card__details">
-                    <div class="loading-hero-card__name"></div>
-                    <div class="loading-hero-card__description"></div>
-                  </div>
-                </div>
-              </div>
+            </div>
+            <div class="single-boxed-section__decor">
+              <img class="single-boxed-section__decor-image" src="./assets/auth.svg" />
             </div>
           </div>
         </div>

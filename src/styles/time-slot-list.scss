@@ -1,0 +1,96 @@
+.time-slot-list {
+    display: flex;
+    flex-direction: column;
+
+    &__additional {
+        margin: 16px 0 24px;
+    }
+
+    &__item {
+        @include uads-button(
+            $align-items: center,
+            $appearance: none,
+            $background-color: transparent,
+            $border-color: #EB922F,
+            $border-style: solid,
+            $border-style--active: solid,
+            $border-style--active-disabled: solid,
+            $border-width: 1px,
+            $box-align: center,
+            $box-sizing: border-box,
+            $color: #EB922F,
+            $color--active: #EB922F,
+            $color--disabled: GrayText,
+            $cursor: pointer,
+            $display: flex,
+            $font-family: inherit,
+            $font-size: 16px,
+            $font-style: normal,
+            $font-variant: normal,
+            $font-weight: 500,
+            $letter-spacing: normal,
+            $line-height: 19px,
+            $margin-left: 0,
+            $margin-right: 0,
+            $margin-bottom: 6px,
+            $margin-top: 6px,
+            $outline-color--focus: #1f5ccf,
+            $outline-style--focus: none,
+            $outline-width--focus: 3px,
+            $outline-offset--focus: 0,
+            $padding-top: 0,
+            $padding-right: 0,
+            $padding-bottom: 0,
+            $padding-left: 0,
+            $text-align: center,
+            $text-indent: 0,
+            $text-rendering: auto,
+            $text-shadow: none,
+            $text-transform: none,
+            $user-select: element,
+            $white-space: normal,
+            $word-spacing: normal,
+            $writing-mode: horizontal-tb
+        );
+
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        height: 43px;
+        width: 100%;
+
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--placeholder {
+            border-color: #ACACAC;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 80px;
+                height: 8px;
+                background: #ACACAC;
+                border-radius: 4px;
+            }
+        }
+
+        &--selected {
+            background: #1EA26B;
+            border-color: #1EA26B;
+            color: #fff;
+
+            &:active {
+                color: #fff;
+            }
+        }
+    }
+
+    &__timezone {
+        margin-bottom: 16px;
+    }
+}

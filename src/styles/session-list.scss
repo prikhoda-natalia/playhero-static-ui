@@ -1,5 +1,5 @@
 .session-list {
-  padding: 48px;
+  padding: 48px 32px;
   background: #fff;
   border-radius: 10px;
 
@@ -33,8 +33,13 @@
   &__item {
     display: flex;
     align-items: center;
-    margin: 16px 0;
+    padding: 16px;
     position: relative; // need "position: relative" for .session-list__fullsize-link to position properly
+
+    &--selected {
+      background: rgba(235, 146, 47, 0.2);
+      border-radius: 10px;
+    }
   }
 
   &__items {
@@ -52,20 +57,38 @@
   &__tag {
     margin-right: 16px;
 
-    &--price {
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 19px;
-    }
-
-    &--status {
+    &--status_confirmed,
+    &--status_pending,
+    &--status_previous,
+    &--status_unavailable {
       padding: 4px 8px;
-      background: #1EA26B;
       border-radius: 5px;
       color: #ffffff;
       font-weight: 500;
       font-size: 12px;
       line-height: 14px;
+    }
+
+    &--status_confirmed {
+      background: #1EA26B;
+    }
+
+    &--status_pending {
+      background: #ACACAC;
+    }
+
+    &--status_previous {
+      background: #ACACAC;
+    }
+
+    &--status_unavailable {
+      background: #CE3434;
+    }
+
+    &--time {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
     }
   }
 

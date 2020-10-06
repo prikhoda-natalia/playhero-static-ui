@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Home - Loading | Playhero</title>
+    <title>User Account Sessions - Previous | Playhero</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
@@ -44,96 +44,105 @@
       </div>
       <div class="page__content">
         <div class="page__content-container">
-          <div class="promo-media promo-media--fortnite">
-            <div class="promo-media__text">
-              Play your <b>hero</b> on your favourite game.
+          <div class="account-menu">
+            <ul class="account-menu__main-menu">
+              <li class="account-menu__main-item">
+                <a class="account-menu__main-link account-menu__main-link--active" href="/">My Sessions</a>
+              </li>
+              <li class="account-menu__main-item">
+                <a aria-current="page" class="account-menu__main-link" href="/">My Details</a>
+              </li>
+            </ul>
+            <div class="account-menu__aside">
+              <button class="secondary-button secondary-button--stroked" type="button">Log Out</button>
             </div>
           </div>
-          <div class="card-list">
-            <div class="card-list__title">Active <b>Heroes</b></div>
-            <div class="card-list__content">
-              <div class="card-list__content-item">
-                <div class="loading-hero-card">
-                  <div class="loading-hero-card__media">
-                    <div class="loading-hero-card__avatar"></div>
-                    <div class="loading-hero-card__game">
-                      <div class="loading-hero-card__game-logo"></div>
+          <div class="boxed-sections">
+            <div class="boxed-sections__item boxed-sections__item--col-4">
+              <div class="session-list">
+                <div class="session-list__title"><b>My</b> Sessions</div>
+                <div class="session-list__items">
+                  <div class="session-list__item session-list__item--selected">
+                    <div class="session-list__avatar">
+                      <img src="./assets/session-avatar.jpg" />
+                    </div>
+                    <div class="session-list__details">
+                      <div class="session-list__name">Hero Name</div>
+                      <div class="session-list__tags">
+                        <div class="session-list__tag session-list__tag--status_previous">Previous</div>
+                        <div class="session-list__tag session-list__tag--time">30 minutes</div>
+                      </div>
+                      <a href="#" class="session-list__fullsize-link"></a>
+                    </div>
+                    <div class="session-list__arrow">
+                      <!-- START: chevron-right.svg -->
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.66663 14.6666L11.3333 7.99998L4.66663 1.33331" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <!-- END: chevron-right.svg -->
                     </div>
                   </div>
-                  <div class="loading-hero-card__details">
-                    <div class="loading-hero-card__name"></div>
-                    <div class="loading-hero-card__description"></div>
+                  <div class="session-list__item">
+                    <div class="session-list__avatar">
+                      <img src="./assets/session-avatar.jpg" />
+                    </div>
+                    <div class="session-list__details">
+                      <div class="session-list__name">Hero Name</div>
+                      <div class="session-list__tags">
+                        <div class="session-list__tag session-list__tag--status_pending">Pending</div>
+                        <div class="session-list__tag session-list__tag--time">30 minutes</div>
+                      </div>
+                      <a href="#" class="session-list__fullsize-link"></a>
+                    </div>
+                    <div class="session-list__arrow">
+                      <!-- START: chevron-right.svg -->
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.66663 14.6666L11.3333 7.99998L4.66663 1.33331" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <!-- END: chevron-right.svg -->
+                    </div>
+                  </div>
+                  <div class="session-list__item">
+                    <div class="session-list__avatar">
+                      <img src="./assets/session-avatar.jpg" />
+                    </div>
+                    <div class="session-list__details">
+                      <div class="session-list__name">Hero Name</div>
+                      <div class="session-list__tags">
+                        <div class="session-list__tag session-list__tag--status_unavailable">Unavailable</div>
+                        <div class="session-list__tag session-list__tag--time">30 minutes</div>
+                      </div>
+                      <a href="#" class="session-list__fullsize-link"></a>
+                    </div>
+                    <div class="session-list__arrow">
+                      <!-- START: chevron-right.svg -->
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.66663 14.6666L11.3333 7.99998L4.66663 1.33331" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <!-- END: chevron-right.svg -->
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="card-list__content-item">
-                <div class="loading-hero-card">
-                  <div class="loading-hero-card__media">
-                    <div class="loading-hero-card__avatar"></div>
-                    <div class="loading-hero-card__game">
-                      <div class="loading-hero-card__game-logo"></div>
+            </div>
+            <div class="boxed-sections__item boxed-sections__item--col-7">
+              <div class="session-message">
+                <div class="session-message__header">
+                  <div class="session-message__header-main">
+                    <div class="session-message__name">Hero Name</div>
+                    <div class="session-message__tag-list">
+                      <div class="session-message__tag session-message__tag--type">Hero Type</div>
+                      <div class="session-message__tag session-message__tag--status_previous">Previous</div>
                     </div>
                   </div>
-                  <div class="loading-hero-card__details">
-                    <div class="loading-hero-card__name"></div>
-                    <div class="loading-hero-card__description"></div>
+                  <div class="session-message__actions">
+                    <a href="/" class="secondary-button secondary-button--stroked" type="button">Contact Us</a>
                   </div>
                 </div>
-              </div>
-              <div class="card-list__content-item">
-                <div class="loading-hero-card">
-                  <div class="loading-hero-card__media">
-                    <div class="loading-hero-card__avatar"></div>
-                    <div class="loading-hero-card__game">
-                      <div class="loading-hero-card__game-logo"></div>
-                    </div>
-                  </div>
-                  <div class="loading-hero-card__details">
-                    <div class="loading-hero-card__name"></div>
-                    <div class="loading-hero-card__description"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-list__content-item">
-                <div class="loading-hero-card">
-                  <div class="loading-hero-card__media">
-                    <div class="loading-hero-card__avatar"></div>
-                    <div class="loading-hero-card__game">
-                      <div class="loading-hero-card__game-logo"></div>
-                    </div>
-                  </div>
-                  <div class="loading-hero-card__details">
-                    <div class="loading-hero-card__name"></div>
-                    <div class="loading-hero-card__description"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-list__content-item">
-                <div class="loading-hero-card">
-                  <div class="loading-hero-card__media">
-                    <div class="loading-hero-card__avatar"></div>
-                    <div class="loading-hero-card__game">
-                      <div class="loading-hero-card__game-logo"></div>
-                    </div>
-                  </div>
-                  <div class="loading-hero-card__details">
-                    <div class="loading-hero-card__name"></div>
-                    <div class="loading-hero-card__description"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-list__content-item">
-                <div class="loading-hero-card">
-                  <div class="loading-hero-card__media">
-                    <div class="loading-hero-card__avatar"></div>
-                    <div class="loading-hero-card__game">
-                      <div class="loading-hero-card__game-logo"></div>
-                    </div>
-                  </div>
-                  <div class="loading-hero-card__details">
-                    <div class="loading-hero-card__name"></div>
-                    <div class="loading-hero-card__description"></div>
-                  </div>
+                <div class="session-message__warning">[Hero Name] will add your [Game ID] on [Game] before the session starts.</div>
+                <div class="session-message__content">
+                  <p>Your session with Hero Name to play [Game] has finished - we hope you had a great time!</p>
+                  <p>If for any reason you didn’t, or the session didn’t take place, please contact us.</p>
                 </div>
               </div>
             </div>
