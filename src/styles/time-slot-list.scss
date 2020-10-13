@@ -1,6 +1,7 @@
 .time-slot-list {
     display: flex;
     flex-direction: column;
+    max-width: 300px;
 
     &__additional {
         margin: 16px 0 24px;

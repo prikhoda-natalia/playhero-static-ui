@@ -14,6 +14,7 @@ Note: We have to use id here to surpass specificity coefficient from Vue unique 
         --day-content-height: 32px;
         --day-content-margin: 0;
         --day-content-width: 32px;
+        --day-min-height: 24px;
         --header-padding: 8px 0;
         --highlight-height: 32px;
         --title-padding: 0 8px 0 0;
@@ -79,6 +80,29 @@ Note: We have to use id here to surpass specificity coefficient from Vue unique 
                 color: #ffffff;
                 font-weight: 500;
                 pointer-events: inherit;
+            }
+        }
+    }
+
+    @media (max-width: $bp-max-tablet) {
+        &.vc-container {
+            --day-content-height: 24px;
+            --day-content-width: 24px;
+            --highlight-height: 24px;
+            --weeks-padding: 0;
+        }
+
+        .vc-grid-container.grid {
+            grid-template-columns: repeat(1, minmax(236px, 1fr)) !important;
+        }
+
+        .vc-weeks {
+            gap: 8px !important;
+        }
+        .playhero-vcalendar {
+            &__day-content {
+                font-size: 12px; // reset .vc-text-sm on .vc-day-content element
+                line-height: 14px;
             }
         }
     }

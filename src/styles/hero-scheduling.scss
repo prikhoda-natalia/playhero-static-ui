@@ -6,4 +6,8 @@
     &__steps {
         flex-grow: 1;
     }
+
+    @media (max-width: $bp-max-mobile-landscape) {
+        flex-direction: column;
+    }
 }
