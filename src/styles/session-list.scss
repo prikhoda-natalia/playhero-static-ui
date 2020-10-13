@@ -84,6 +84,10 @@
       @include session-list__tag(#1EA26B);
     }
 
+    &--status_respond {
+      @include session-list__tag(#EB922F);
+    }
+
     &--status_unavailable {
       @include session-list__tag(#CE3434);
     }

@@ -3,6 +3,10 @@
     flex-direction: column;
     max-width: 300px;
 
+    &__actions-hint {
+        margin-top: 24px;
+    }
+
     &__additional {
         margin: 16px 0 24px;
     }
