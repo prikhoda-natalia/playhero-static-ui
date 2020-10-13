@@ -1,3 +1,13 @@
+@mixin session-list__tag($background-color) {
+  padding: 4px 8px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  background: $background-color;
+}
+
 .session-list {
   padding: 48px 32px;
   background: #fff;
@@ -56,33 +66,26 @@
 
   &__tag {
     margin-right: 16px;
-
-    &--status_confirmed,
-    &--status_pending,
-    &--status_previous,
-    &--status_unavailable {
-      padding: 4px 8px;
-      border-radius: 5px;
-      color: #ffffff;
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 14px;
-    }
+    margin-bottom: 8px;
 
     &--status_confirmed {
-      background: #1EA26B;
+      @include session-list__tag(#1EA26B);
     }
 
     &--status_pending {
-      background: #ACACAC;
+      @include session-list__tag(#ACACAC);
     }
 
     &--status_previous {
-      background: #ACACAC;
+      @include session-list__tag(#ACACAC);
+    }
+
+    &--status_purchased {
+      @include session-list__tag(#1EA26B);
     }
 
     &--status_unavailable {
-      background: #CE3434;
+      @include session-list__tag(#CE3434);
     }
 
     &--time {
@@ -95,6 +98,7 @@
   &__tags {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   &__title {
