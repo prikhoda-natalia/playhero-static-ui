@@ -19,6 +19,7 @@
     border-radius: 10px;
     overflow: hidden;
     flex-shrink: 0;
+    margin-right: 24px;
   }
 
   &__avatar-image {
@@ -29,7 +30,6 @@
 
   &__details {
     flex-grow: 1;
-    margin-left: 24px;
   }
 
   &__fullsize-link {

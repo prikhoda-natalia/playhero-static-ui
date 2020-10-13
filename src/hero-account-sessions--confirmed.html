@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>User Account Sessions - Confirmed - Propose Change | Playhero</title>
+    <title>Hero Account Sessions - Confirmed | Playhero</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
@@ -51,7 +51,7 @@
                   <a class="account-menu__main-link account-menu__main-link--active" href="/">My Sessions</a>
                 </li>
                 <li class="account-menu__main-item">
-                  <a aria-current="page" class="account-menu__main-link" href="/">My Details</a>
+                  <a aria-current="page" class="account-menu__main-link" href="/">Availability</a>
                 </li>
               </ul>
               <div class="account-menu__aside">
@@ -64,13 +64,10 @@
                   <div class="session-list__title"><b>My</b> Sessions</div>
                   <div class="session-list__items">
                     <div class="session-list__item session-list__item--selected">
-                      <div class="session-list__avatar">
-                        <img src="./assets/session-avatar.jpg" />
-                      </div>
                       <div class="session-list__details">
-                        <div class="session-list__name">Hero Name</div>
+                        <div class="session-list__name">User Name: Minecraft</div>
                         <div class="session-list__tags">
-                          <div class="session-list__tag session-list__tag--status_purchased">Purchased</div>
+                          <div class="session-list__tag session-list__tag--status_confirmed">Confirmed</div>
                           <div class="session-list__tag session-list__tag--time">30 minutes</div>
                         </div>
                         <a href="#" class="session-list__fullsize-link"></a>
@@ -84,13 +81,10 @@
                       </div>
                     </div>
                     <div class="session-list__item">
-                      <div class="session-list__avatar">
-                        <img src="./assets/session-avatar.jpg" />
-                      </div>
                       <div class="session-list__details">
-                        <div class="session-list__name">Hero Name</div>
+                        <div class="session-list__name">User Name: Minecraft</div>
                         <div class="session-list__tags">
-                          <div class="session-list__tag session-list__tag--status_unavailable">Unavailable</div>
+                          <div class="session-list__tag session-list__tag--status_respond">Respond</div>
                           <div class="session-list__tag session-list__tag--time">30 minutes</div>
                         </div>
                         <a href="#" class="session-list__fullsize-link"></a>
@@ -104,13 +98,10 @@
                       </div>
                     </div>
                     <div class="session-list__item">
-                      <div class="session-list__avatar">
-                        <img src="./assets/session-avatar.jpg" />
-                      </div>
                       <div class="session-list__details">
-                        <div class="session-list__name">Hero Name</div>
+                        <div class="session-list__name">User Name: Minecraft</div>
                         <div class="session-list__tags">
-                          <div class="session-list__tag session-list__tag--status_previous">Previous</div>
+                          <div class="session-list__tag session-list__tag--status_pending">Pending</div>
                           <div class="session-list__tag session-list__tag--time">30 minutes</div>
                         </div>
                         <a href="#" class="session-list__fullsize-link"></a>
@@ -128,10 +119,10 @@
               </div>
               <div class="boxed-sections__item boxed-sections__item--col-7">
                 <div class="session-scheduler">
-                  <div class="session-scheduler__message"><b>Hero name</b> - <b>User Name</b> on <b>8th August 2020: 1:00pm (CST)</b></div>
-                  <div class="session-scheduler__note session-scheduler__note--warning">[Hero Name] will add your [Game ID] on [Game] before the session starts.</div>
+                  <div class="session-scheduler__message"><b>User Name</b> - <b>Hero name</b> on <b>8th August 2020: 1:00pm (CST)</b></div>
+                  <div class="session-scheduler__note session-scheduler__note--reminder">Please add [Game ID] on [Game] before the session starts.</div>
                   <div class="session-scheduler__step">
-                    <div class="session-scheduler__step-title">Propose a New Day</div>
+                    <div class="session-scheduler__step-title">Confirmed Day</div>
                     <div class="session-scheduler__step-description">10th August 2020</div>
                     <div class="session-scheduler__step-content">
                       <v-date-picker
@@ -147,8 +138,8 @@
                     </div>
                   </div>
                   <div class="session-scheduler__step">
-                    <div class="session-scheduler__step-title">Choose Time</div>
-                    <div class="session-scheduler__step-description">Select <b>2</b> windows you’re able to play your session.</div>
+                    <div class="session-scheduler__step-title">Confirmed Time</div>
+                    <div class="session-scheduler__step-description">13:00 (CST)</div>
                     <div class="session-scheduler__step-content">
                         <div class="time-slot-list">
                           <div class="time-slot-list__timezone">
@@ -176,21 +167,21 @@
                               </div>
                             </div>
                           </div>
-                          <button type="button" class="time-slot-list__item">1:00pm - 2:00pm</button>
-                          <button type="button" class="time-slot-list__item">2:00pm - 3:00pm</button>
-                          <button type="button" class="time-slot-list__item">3:00pm - 4:00pm</button>
-                          <button type="button" class="time-slot-list__item">4:00pm - 5:00pm</button>
+                          <button type="button" class="time-slot-list__item time-slot-list__item--selected">1:00pm - 2:00pm</button>
                           <div class="time-slot-list__additional">
-                            <div class="form-field-hint">These are the times the hero is available in your timezone.</div>
+                            <div class="form-field-hint">This is the time the session will take place in your timezone.</div>
+                          </div>
+                          <div class="time-slot-list__actions">
+                            <button type="submit" class="primary-button primary-button--stroked">Propose Change</button>
+                            <div class="time-slot-list__actions-hint">
+                              <div class="form-field-hint">Propose a different day or time.</div>
+                            </div>
                           </div>
                         </div>
                     </div>
                   </div>
                   <div class="session-scheduler__action">
-                    <button type="submit" class="secondary-button secondary-button--stroked">Back</button>
-                  </div>
-                  <div class="session-scheduler__action">
-                    <button type="submit" disabled class="primary-button primary-button--solid">Propose Times</button>
+                    <button type="submit" class="primary-button primary-button--stroked-danger">Cancel Session</button>
                   </div>
                 </div>
               </div>

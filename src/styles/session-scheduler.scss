@@ -13,6 +13,47 @@
         grid-column: 1 / span 2;
     }
 
+    &__note {
+        grid-column: 1 / span 2;
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 16px 16px 16px 48px;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 48px;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: 16px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-position: 50% 50%;
+        }
+
+        &--reminder {
+            color: #CE3434;
+            background: rgba(206, 52, 52, 0.2);
+
+            &::before {
+                background-image: url(./assets/icons/info-reminder.svg);
+            }
+        }
+
+        &--warning {
+            color: #EB922F;
+            background: rgba(235, 146, 47, 0.2);
+
+            &::before {
+                background-image: url(./assets/icons/info-warning.svg);
+            }
+        }
+    }
+
     &__step-description {
         font-weight: 300;
         font-size: 16px;
@@ -27,41 +68,15 @@
         margin-bottom: 8px;
     }
 
-    &__warning {
-        grid-column: 1 / span 2;
-        background: rgba(235, 146, 47, 0.2);
-        border-radius: 10px;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 14px;
-        color: #EB922F;
-        padding: 16px 16px 16px 48px;
-        position: relative;
-
-        &::before {
-            content: "";
-            display: block;
-            width: 48px;
-            height: 100%;
-            background-image: url(./assets/icons/info.svg);
-            background-repeat: no-repeat;
-            background-size: 16px;
-            position: absolute;
-            left: 0;
-            top: 0;
-            background-position: 50% 50%;
-        }
-    }
-
     @media (max-width: 1200px) {
         grid-template-columns: 1fr;
 
         &__message {
-            grid-column: span 1;
+            grid-column: auto;
         }
 
-        &__warning {
-            grid-column: span 1;
+        &__note {
+            grid-column: auto;
         }
     }
 

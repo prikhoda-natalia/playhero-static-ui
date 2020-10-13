@@ -166,7 +166,6 @@
             }
             &__step--active + .v-stepper__content {
                 display: block !important; // have to use !important to override styles for bigger screen size
-                grid-column: 1 / span 3;
                 grid-column: auto;
             }
             &__description {
