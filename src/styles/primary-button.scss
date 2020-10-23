@@ -13,12 +13,21 @@
       "border-color": #EB922F,
       "border-color--disabled": #ACACAC,
       "text-color": #ffffff,
+      "text-color--disabled": #ACACAC,
     ),
     "stroked": (
       "background-color": transparent,
       "border-color": #EB922F,
       "border-color--disabled": #ACACAC,
       "text-color": #EB922F,
+      "text-color--disabled": #ACACAC,
+    ),
+    "stroked-danger": (
+      "background-color": transparent,
+      "border-color": #CE3434,
+      "border-color--disabled": #ACACAC,
+      "text-color": #CE3434,
+      "text-color--disabled": #ACACAC,
     )
   );
   $display: inline-block;
@@ -31,6 +40,7 @@
   $line-height: 19px;
   
   width: 100%;
+  max-width: 300px;
 
   @each $view-name, $view-style in $button-views {
     &--#{$view-name} {
@@ -83,7 +93,7 @@
           $box-sizing: border-box,
           $color: map-get($view-style, "text-color"),
           $color--active: map-get($view-style, "text-color"),
-          $color--disabled: #ACACAC,
+          $color--disabled: map-get($view-style, "text-color--disabled"),
           $cursor: default,
           $display: $display,
           $font-family: inherit,

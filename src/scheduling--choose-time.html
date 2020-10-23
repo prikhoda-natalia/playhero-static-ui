@@ -11,98 +11,106 @@
     <link rel="stylesheet" href="styles.min.css" />
   </head>
   <body>
-    <div class="page">
-      <div class="page__header">
-        <div class="page__header-container">
-          <a aria-current="page" class="page__logo" href="/">
-            <img
-              class="page__logo-image"
-              src="./assets/logo-black.svg"
-              alt="Playhero"
-            />
-            <span class="page__beta-badge">Beta</span>
-          </a>
-          <div class="page__header-menu">
-            <ul class="header-menu">
-              <li>
-                <a
-                  aria-current="page"
-                  class="header-menu__link header-menu__link--active"
-                  href="/"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a class="header-menu__link" href="/">Contact</a>
-              </li>
-              <li>
-                <a class="header-menu__link" href="/">Account</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="page__content">
-        <div class="page__content-container">
-          <div class="promo-media promo-media--gamers">
-            <div class="promo-media__text">
-              You’re playing with <b>Hero Name</b>! 🎉
+    <div id='app'>
+      <div class="page">
+        <div class="page__header">
+          <div class="page__header-container">
+            <a aria-current="page" class="page__logo" href="/">
+              <img
+                class="page__logo-image"
+                src="./assets/logo-black.svg"
+                alt="Playhero"
+              />
+              <span class="page__beta-badge">Beta</span>
+            </a>
+            <div class="page__header-menu">
+              <ul class="header-menu">
+                <li>
+                  <a
+                    aria-current="page"
+                    class="header-menu__link header-menu__link--active"
+                    href="/"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a class="header-menu__link" href="/">Contact</a>
+                </li>
+                <li>
+                  <a class="header-menu__link" href="/">Account</a>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="boxed-sections">
-            <div class="boxed-sections__item boxed-sections__item--col-12">
-              <div class="hero-scheduling">
-                <div class="hero-scheduling__details">
-                  <div class="compact-profile-details">
-                    <div class="compact-profile-details__name">MyUsernamesthis</div>
-                    <div class="compact-profile-details__tag-list">
-                      <div class="compact-profile-details__tag compact-profile-details__tag--transparent">Hero Type</div>
-                      <div class="compact-profile-details__tag compact-profile-details__tag--green">Purchased</div>
-                    </div>
-                    <div class="compact-profile-details__avatar">
-                      <img
-                        class="compact-profile-details__avatar-image"
-                        src="./assets/hero-profile-avatar.jpg"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="hero-scheduling__steps">
-                  <div class="scheduling-steps">
-                    <div class="scheduling-steps__step scheduling-steps__step--fixed scheduling-steps__step--complete">
-                      <div class="scheduling-steps__title">Choose Game</div>
-                      <div class="scheduling-steps__description">Which game would you like to play?</div>
-                      <div class="scheduling-steps__content">
-                        <div class="selected-game">
-                          <div class="selected-game__game">
-                            <img class="selected-game__game-background" src="./assets/call-of-duty-card.jpg">
-                            <div class="selected-game__game-logo">
-                              <!-- START: call-of-duty-logo.svg -->
-                              <svg width="96" height="24" viewBox="0 0 96 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.88109 3.97754C4.5464 3.16558 6.49463 3.14028 8.27956 3.506C9.63205 3.83033 11.0673 4.59628 11.578 5.97177C12.0886 7.55658 11.9782 9.2472 11.9805 10.8872C10.3589 10.8803 8.73729 10.8872 7.11798 10.8849C7.0837 9.52322 7.19158 8.15462 7.05127 6.79753C7.08117 5.85907 5.41816 5.86597 5.44116 6.80443C5.26635 8.93898 5.39976 11.0873 5.35859 13.2288C5.39769 14.5948 5.25945 15.9798 5.47589 17.3346C5.6093 17.8774 6.29015 17.9188 6.72028 17.7348C7.05127 17.4979 7.0584 17.0631 7.09291 16.6974C7.14581 15.6807 7.10441 14.6641 7.11821 13.6474C8.74189 13.6428 10.3635 13.6451 11.9874 13.6451C11.9391 15.1885 12.0771 16.8308 11.4285 18.273C10.352 20.0556 8.10704 20.725 6.12891 20.6631C4.38539 20.647 2.38885 20.2445 1.30548 18.7423C0.530324 17.5278 0.557926 16.0143 0.495822 14.6252C0.507323 12.1615 0.413016 9.69343 0.583228 7.23456C0.654533 5.81996 1.6252 4.57098 2.88109 3.97754ZM14.5981 3.58881C16.9535 3.55661 19.3111 3.55891 21.6665 3.58881C22.5612 9.16899 23.5181 14.74 24.429 20.3179C22.9132 20.313 21.3974 20.3179 19.8816 20.313C19.7481 19.2688 19.6492 18.2197 19.4859 17.1779C18.9452 17.1871 18.4026 17.1871 17.8618 17.1846C17.9584 16.2507 18.0642 15.3171 18.1654 14.383C18.4989 14.383 18.8302 14.3807 19.1637 14.3807C18.8601 11.9908 18.6323 9.58946 18.2666 7.2088C17.7928 11.5837 17.2223 15.9473 16.7025 20.3176C15.1823 20.3156 13.6596 20.3156 12.1392 20.3156C12.9489 14.7402 13.8045 9.16899 14.5981 3.58881ZM25.2616 3.57271C26.874 3.56811 28.4887 3.57041 30.1035 3.57041C30.1058 8.03271 30.1035 12.4927 30.1058 16.9548C31.0925 16.9596 32.0793 16.9573 33.0661 16.9573C33.0707 18.0775 33.0684 19.1952 33.0684 20.3156C30.4669 20.3181 27.8654 20.3133 25.2639 20.3156C25.2593 14.7354 25.2639 9.15289 25.2616 3.57271ZM34.2184 3.57271C35.8354 3.56811 37.4548 3.57041 39.0741 3.57041C39.0787 8.03271 39.0741 12.4927 39.0764 16.9548C40.0539 16.9596 41.0315 16.9573 42.0091 16.9573C42.0114 18.0775 42.0114 19.1952 42.0114 20.3156H34.2207C34.2161 14.7354 34.2207 9.15289 34.2184 3.57271ZM48.0332 3.57271C50.1723 3.55661 52.3138 3.57271 54.4504 3.66701C55.5754 3.74752 56.7529 3.82573 57.756 4.39386C58.6599 4.9367 59.2143 5.96487 59.2232 7.01604C59.3707 9.92804 59.2856 12.8492 59.2948 15.7635C59.2373 16.9665 59.3638 18.3653 58.492 19.3242C57.5211 20.2118 56.1277 20.2558 54.8833 20.3064C52.6015 20.3317 50.3175 20.3064 48.0332 20.3156C48.0309 14.7354 48.0332 9.15289 48.0332 3.57271ZM52.8888 6.45251C52.8911 10.1282 52.8911 13.8017 52.8888 17.4772C53.3512 17.376 54.055 17.4703 54.2595 16.9228C54.5447 15.7152 54.3929 14.455 54.432 13.2219C54.3929 11.2069 54.5173 9.18279 54.3607 7.17016C54.2942 6.44561 53.425 6.47551 52.8888 6.45251ZM60.5069 3.57271C62.1171 3.56788 63.7272 3.57271 65.3373 3.57041C65.3396 7.63709 65.3373 11.7038 65.3373 15.7704C65.3467 16.3087 65.335 16.8515 65.4362 17.3829C65.5098 17.9924 66.584 17.9648 66.6302 17.353C66.7381 16.8287 66.7268 16.2903 66.7335 15.7589C66.7289 11.6969 66.7358 7.63479 66.7289 3.57271C68.339 3.56581 69.9491 3.57271 71.5615 3.57041C71.5569 7.48068 71.5755 11.3909 71.5523 15.2989C71.5017 16.3754 71.6213 17.56 70.9821 18.4961C70.2205 19.7725 68.7417 20.4211 67.3108 20.5729C65.4985 20.78 63.5273 20.5663 62.0092 19.4758C61.0546 18.7972 60.5555 17.6287 60.5667 16.4738C60.4515 12.1753 60.5322 7.874 60.5069 3.57271ZM72.6032 3.57041H83.2369C83.2392 4.69059 83.2369 5.80846 83.2392 6.92864C82.2777 6.92864 81.3165 6.92634 80.3573 6.93094V20.3156C78.7332 20.3156 77.1093 20.3181 75.4856 20.3133V6.93094C74.5287 6.92864 73.5718 6.92634 72.615 6.93094C72.5943 5.81076 72.6055 4.69059 72.6032 3.57041ZM84.1089 3.57041C85.5991 3.58881 87.0899 3.53131 88.5804 3.60031C89.4956 6.60662 90.4964 9.58532 91.4438 12.5824C91.6626 13.3233 92.0212 14.0476 91.9982 14.8368C91.9867 16.6928 91.9959 18.5493 91.9915 20.4053C90.4987 20.4078 89.008 20.4078 87.5152 20.4053C87.5152 18.6252 87.5085 16.8448 87.52 15.0622C87.5248 14.6622 87.4991 14.2549 87.3728 13.8705C86.2781 10.441 85.1989 7.00454 84.1089 3.57041ZM91.076 3.57271C92.5571 3.56788 94.0387 3.57271 95.52 3.57041C94.4754 6.74003 93.4452 9.91424 92.4007 13.0836C91.7383 10.9677 90.9955 8.87204 90.395 6.7398C90.5355 5.67045 90.8601 4.63078 91.076 3.57271Z" fill="white"></path>
-                                <path d="M41.4593 7.58656C42.3103 7.21163 43.5846 7.57506 43.7249 8.60093C43.8192 9.83841 43.8284 11.0943 43.7157 12.3318C43.4581 13.7554 41.0775 13.8223 40.7025 12.4422C40.5185 11.3358 40.622 10.1972 40.6174 9.07936C40.5898 8.47442 40.8727 7.82348 41.4593 7.58656ZM42.0389 8.37781C41.9377 9.74641 41.9791 11.1219 42.0136 12.4928L42.3379 12.387C42.4829 11.1242 42.4392 9.82921 42.3678 8.56183C42.2873 8.51582 42.1217 8.42382 42.0389 8.37781ZM44.2287 7.57506C44.9624 7.57276 45.6939 7.57046 46.4253 7.57506C46.423 7.95458 46.4207 8.33641 46.4207 8.71824L45.5306 8.72514C45.5306 9.09086 45.5283 9.45659 45.5283 9.82231C45.7928 9.82461 46.0596 9.82691 46.3287 9.83151C46.3287 10.1811 46.3287 10.5308 46.331 10.8804L45.5306 10.8873C45.5306 11.6992 45.5283 12.5087 45.5306 13.3211C45.0958 13.3211 44.6634 13.3234 44.2312 13.3257C44.2287 11.4071 44.231 9.49109 44.2287 7.57506Z" fill="white"></path>
-                                <path d="M93.737 18.8194C94.0491 18.8194 94.3063 18.9174 94.5078 19.1136C94.7095 19.31 94.8102 19.5416 94.8102 19.8087C94.8102 20.0808 94.7079 20.3138 94.5029 20.5075C94.298 20.7011 94.0519 20.7982 93.7641 20.7982C93.4745 20.7982 93.228 20.7016 93.0239 20.5082C92.8199 20.3147 92.718 20.0817 92.718 19.8087C92.718 19.6166 92.7718 19.4402 92.8797 19.2796C92.9878 19.1189 93.1228 19.002 93.285 18.9289C93.4469 18.8557 93.5978 18.8194 93.737 18.8194ZM93.7887 19.0117C93.5323 19.0117 93.3241 19.092 93.1647 19.252C93.0055 19.4121 92.9257 19.598 92.9257 19.8089C92.9257 20.0274 93.0081 20.2149 93.173 20.3706C93.3377 20.5266 93.5357 20.6048 93.7669 20.6048C93.9971 20.6048 94.1947 20.5266 94.3596 20.3706C94.5243 20.2147 94.6067 20.0274 94.6067 19.8089C94.6067 19.6582 94.5653 19.5193 94.4825 19.3921C94.3997 19.2649 94.2932 19.1699 94.1627 19.1067C94.0328 19.0436 93.9081 19.0117 93.7887 19.0117ZM93.3041 20.3373V19.2872H93.8299C93.9599 19.2872 94.0549 19.3158 94.114 19.373C94.1731 19.4303 94.2025 19.5007 94.2025 19.5842C94.2025 19.6652 94.1779 19.7302 94.1282 19.7792C94.0786 19.8285 94.0038 19.8614 93.9035 19.8791C93.9491 19.8952 93.9852 19.9175 94.0121 19.9455C94.039 19.9734 94.0818 20.0341 94.14 20.127L94.2695 20.3375H93.9923L93.8996 20.1684C93.8442 20.0677 93.7952 19.9991 93.7529 19.9623C93.7103 19.926 93.6549 19.9076 93.5868 19.9076H93.5281V20.3377H93.3041V20.3373ZM93.5281 19.7404H93.711C93.803 19.7404 93.8683 19.7289 93.907 19.7063C93.9456 19.6833 93.9649 19.6461 93.9649 19.5945C93.966 19.5735 93.9612 19.5526 93.9511 19.5342C93.9411 19.5157 93.9261 19.5004 93.9079 19.4899C93.8695 19.4664 93.8117 19.4551 93.7345 19.4551H93.5284V19.7404H93.5281Z" fill="white"></path>
-                              </svg>
-                              <!-- END: call-of-duty-logo.svg -->
-                            </div>
-                          </div>
-                          <div class="selected-game__additional">
-                            <div class="form-field">
-                              <input type="text" class="form-field__input" placeholder="Enter Activision ID" required="">
-                            </div>
-                            <div class="form-field-hint">Hero Name needs this to add you on Game before your session. Make sure it’s correct!</div>
-                          </div>
-                          <div class="selected-game__actions">
-                            <button type="submit" disabled class="primary-button primary-button--solid">Next</button>
-                          </div>
-                        </div>
+        </div>
+        <div class="page__content">
+          <div class="page__content-container">
+            <div class="promo-media promo-media--gamers">
+              <div class="promo-media__text">
+                You’re playing with <b>Hero Name</b>! 🎉
+              </div>
+            </div>
+            <div class="boxed-sections">
+              <div class="boxed-sections__item boxed-sections__item--col-12">
+                <div class="hero-scheduling">
+                  <div class="hero-scheduling__details">
+                    <div class="compact-profile-details">
+                      <div class="compact-profile-details__name">MyUsernamesthis</div>
+                      <div class="compact-profile-details__tag-list">
+                        <div class="compact-profile-details__tag compact-profile-details__tag--transparent">Hero Type</div>
+                        <div class="compact-profile-details__tag compact-profile-details__tag--green">Purchased</div>
+                      </div>
+                      <div class="compact-profile-details__avatar">
+                        <img
+                          class="compact-profile-details__avatar-image"
+                          src="./assets/hero-profile-avatar.jpg"
+                        />
                       </div>
                     </div>
-                    <div class="scheduling-steps__step scheduling-steps__step--fixed scheduling-steps__step--complete">
-                      <div class="scheduling-steps__title">Choose Day</div>
-                      <div class="scheduling-steps__description">Below are the days the hero is available.</div>
-                      <div class="scheduling-steps__content">
-                        <div id='app'>
+                  </div>
+                  <div class="hero-scheduling__steps">
+                    <v-stepper v-model="e1" class="playhero-v-stepper">
+                        <v-stepper-step complete editable step="1">
+                          <div class="v-stepper__title">Choose Game</div>
+                          <div class="v-stepper__description">Which game would you like to play?</div>
+                          <div class="v-stepper__selected-value">
+                            Call Of Duty<br/>
+                            Activision ID: 123456789
+                          </div>
+                        </v-stepper-step>
+                        <v-stepper-content step="1">
+                          <div class="selected-game">
+                            <div class="selected-game__game">
+                              <img class="selected-game__game-background" src="./assets/call-of-duty-card.jpg">
+                              <div class="selected-game__game-logo">
+                                <!-- START: call-of-duty-logo.svg -->
+                                <svg width="96" height="24" viewBox="0 0 96 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M2.88109 3.97754C4.5464 3.16558 6.49463 3.14028 8.27956 3.506C9.63205 3.83033 11.0673 4.59628 11.578 5.97177C12.0886 7.55658 11.9782 9.2472 11.9805 10.8872C10.3589 10.8803 8.73729 10.8872 7.11798 10.8849C7.0837 9.52322 7.19158 8.15462 7.05127 6.79753C7.08117 5.85907 5.41816 5.86597 5.44116 6.80443C5.26635 8.93898 5.39976 11.0873 5.35859 13.2288C5.39769 14.5948 5.25945 15.9798 5.47589 17.3346C5.6093 17.8774 6.29015 17.9188 6.72028 17.7348C7.05127 17.4979 7.0584 17.0631 7.09291 16.6974C7.14581 15.6807 7.10441 14.6641 7.11821 13.6474C8.74189 13.6428 10.3635 13.6451 11.9874 13.6451C11.9391 15.1885 12.0771 16.8308 11.4285 18.273C10.352 20.0556 8.10704 20.725 6.12891 20.6631C4.38539 20.647 2.38885 20.2445 1.30548 18.7423C0.530324 17.5278 0.557926 16.0143 0.495822 14.6252C0.507323 12.1615 0.413016 9.69343 0.583228 7.23456C0.654533 5.81996 1.6252 4.57098 2.88109 3.97754ZM14.5981 3.58881C16.9535 3.55661 19.3111 3.55891 21.6665 3.58881C22.5612 9.16899 23.5181 14.74 24.429 20.3179C22.9132 20.313 21.3974 20.3179 19.8816 20.313C19.7481 19.2688 19.6492 18.2197 19.4859 17.1779C18.9452 17.1871 18.4026 17.1871 17.8618 17.1846C17.9584 16.2507 18.0642 15.3171 18.1654 14.383C18.4989 14.383 18.8302 14.3807 19.1637 14.3807C18.8601 11.9908 18.6323 9.58946 18.2666 7.2088C17.7928 11.5837 17.2223 15.9473 16.7025 20.3176C15.1823 20.3156 13.6596 20.3156 12.1392 20.3156C12.9489 14.7402 13.8045 9.16899 14.5981 3.58881ZM25.2616 3.57271C26.874 3.56811 28.4887 3.57041 30.1035 3.57041C30.1058 8.03271 30.1035 12.4927 30.1058 16.9548C31.0925 16.9596 32.0793 16.9573 33.0661 16.9573C33.0707 18.0775 33.0684 19.1952 33.0684 20.3156C30.4669 20.3181 27.8654 20.3133 25.2639 20.3156C25.2593 14.7354 25.2639 9.15289 25.2616 3.57271ZM34.2184 3.57271C35.8354 3.56811 37.4548 3.57041 39.0741 3.57041C39.0787 8.03271 39.0741 12.4927 39.0764 16.9548C40.0539 16.9596 41.0315 16.9573 42.0091 16.9573C42.0114 18.0775 42.0114 19.1952 42.0114 20.3156H34.2207C34.2161 14.7354 34.2207 9.15289 34.2184 3.57271ZM48.0332 3.57271C50.1723 3.55661 52.3138 3.57271 54.4504 3.66701C55.5754 3.74752 56.7529 3.82573 57.756 4.39386C58.6599 4.9367 59.2143 5.96487 59.2232 7.01604C59.3707 9.92804 59.2856 12.8492 59.2948 15.7635C59.2373 16.9665 59.3638 18.3653 58.492 19.3242C57.5211 20.2118 56.1277 20.2558 54.8833 20.3064C52.6015 20.3317 50.3175 20.3064 48.0332 20.3156C48.0309 14.7354 48.0332 9.15289 48.0332 3.57271ZM52.8888 6.45251C52.8911 10.1282 52.8911 13.8017 52.8888 17.4772C53.3512 17.376 54.055 17.4703 54.2595 16.9228C54.5447 15.7152 54.3929 14.455 54.432 13.2219C54.3929 11.2069 54.5173 9.18279 54.3607 7.17016C54.2942 6.44561 53.425 6.47551 52.8888 6.45251ZM60.5069 3.57271C62.1171 3.56788 63.7272 3.57271 65.3373 3.57041C65.3396 7.63709 65.3373 11.7038 65.3373 15.7704C65.3467 16.3087 65.335 16.8515 65.4362 17.3829C65.5098 17.9924 66.584 17.9648 66.6302 17.353C66.7381 16.8287 66.7268 16.2903 66.7335 15.7589C66.7289 11.6969 66.7358 7.63479 66.7289 3.57271C68.339 3.56581 69.9491 3.57271 71.5615 3.57041C71.5569 7.48068 71.5755 11.3909 71.5523 15.2989C71.5017 16.3754 71.6213 17.56 70.9821 18.4961C70.2205 19.7725 68.7417 20.4211 67.3108 20.5729C65.4985 20.78 63.5273 20.5663 62.0092 19.4758C61.0546 18.7972 60.5555 17.6287 60.5667 16.4738C60.4515 12.1753 60.5322 7.874 60.5069 3.57271ZM72.6032 3.57041H83.2369C83.2392 4.69059 83.2369 5.80846 83.2392 6.92864C82.2777 6.92864 81.3165 6.92634 80.3573 6.93094V20.3156C78.7332 20.3156 77.1093 20.3181 75.4856 20.3133V6.93094C74.5287 6.92864 73.5718 6.92634 72.615 6.93094C72.5943 5.81076 72.6055 4.69059 72.6032 3.57041ZM84.1089 3.57041C85.5991 3.58881 87.0899 3.53131 88.5804 3.60031C89.4956 6.60662 90.4964 9.58532 91.4438 12.5824C91.6626 13.3233 92.0212 14.0476 91.9982 14.8368C91.9867 16.6928 91.9959 18.5493 91.9915 20.4053C90.4987 20.4078 89.008 20.4078 87.5152 20.4053C87.5152 18.6252 87.5085 16.8448 87.52 15.0622C87.5248 14.6622 87.4991 14.2549 87.3728 13.8705C86.2781 10.441 85.1989 7.00454 84.1089 3.57041ZM91.076 3.57271C92.5571 3.56788 94.0387 3.57271 95.52 3.57041C94.4754 6.74003 93.4452 9.91424 92.4007 13.0836C91.7383 10.9677 90.9955 8.87204 90.395 6.7398C90.5355 5.67045 90.8601 4.63078 91.076 3.57271Z" fill="white"></path>
+                                  <path d="M41.4593 7.58656C42.3103 7.21163 43.5846 7.57506 43.7249 8.60093C43.8192 9.83841 43.8284 11.0943 43.7157 12.3318C43.4581 13.7554 41.0775 13.8223 40.7025 12.4422C40.5185 11.3358 40.622 10.1972 40.6174 9.07936C40.5898 8.47442 40.8727 7.82348 41.4593 7.58656ZM42.0389 8.37781C41.9377 9.74641 41.9791 11.1219 42.0136 12.4928L42.3379 12.387C42.4829 11.1242 42.4392 9.82921 42.3678 8.56183C42.2873 8.51582 42.1217 8.42382 42.0389 8.37781ZM44.2287 7.57506C44.9624 7.57276 45.6939 7.57046 46.4253 7.57506C46.423 7.95458 46.4207 8.33641 46.4207 8.71824L45.5306 8.72514C45.5306 9.09086 45.5283 9.45659 45.5283 9.82231C45.7928 9.82461 46.0596 9.82691 46.3287 9.83151C46.3287 10.1811 46.3287 10.5308 46.331 10.8804L45.5306 10.8873C45.5306 11.6992 45.5283 12.5087 45.5306 13.3211C45.0958 13.3211 44.6634 13.3234 44.2312 13.3257C44.2287 11.4071 44.231 9.49109 44.2287 7.57506Z" fill="white"></path>
+                                  <path d="M93.737 18.8194C94.0491 18.8194 94.3063 18.9174 94.5078 19.1136C94.7095 19.31 94.8102 19.5416 94.8102 19.8087C94.8102 20.0808 94.7079 20.3138 94.5029 20.5075C94.298 20.7011 94.0519 20.7982 93.7641 20.7982C93.4745 20.7982 93.228 20.7016 93.0239 20.5082C92.8199 20.3147 92.718 20.0817 92.718 19.8087C92.718 19.6166 92.7718 19.4402 92.8797 19.2796C92.9878 19.1189 93.1228 19.002 93.285 18.9289C93.4469 18.8557 93.5978 18.8194 93.737 18.8194ZM93.7887 19.0117C93.5323 19.0117 93.3241 19.092 93.1647 19.252C93.0055 19.4121 92.9257 19.598 92.9257 19.8089C92.9257 20.0274 93.0081 20.2149 93.173 20.3706C93.3377 20.5266 93.5357 20.6048 93.7669 20.6048C93.9971 20.6048 94.1947 20.5266 94.3596 20.3706C94.5243 20.2147 94.6067 20.0274 94.6067 19.8089C94.6067 19.6582 94.5653 19.5193 94.4825 19.3921C94.3997 19.2649 94.2932 19.1699 94.1627 19.1067C94.0328 19.0436 93.9081 19.0117 93.7887 19.0117ZM93.3041 20.3373V19.2872H93.8299C93.9599 19.2872 94.0549 19.3158 94.114 19.373C94.1731 19.4303 94.2025 19.5007 94.2025 19.5842C94.2025 19.6652 94.1779 19.7302 94.1282 19.7792C94.0786 19.8285 94.0038 19.8614 93.9035 19.8791C93.9491 19.8952 93.9852 19.9175 94.0121 19.9455C94.039 19.9734 94.0818 20.0341 94.14 20.127L94.2695 20.3375H93.9923L93.8996 20.1684C93.8442 20.0677 93.7952 19.9991 93.7529 19.9623C93.7103 19.926 93.6549 19.9076 93.5868 19.9076H93.5281V20.3377H93.3041V20.3373ZM93.5281 19.7404H93.711C93.803 19.7404 93.8683 19.7289 93.907 19.7063C93.9456 19.6833 93.9649 19.6461 93.9649 19.5945C93.966 19.5735 93.9612 19.5526 93.9511 19.5342C93.9411 19.5157 93.9261 19.5004 93.9079 19.4899C93.8695 19.4664 93.8117 19.4551 93.7345 19.4551H93.5284V19.7404H93.5281Z" fill="white"></path>
+                                </svg>
+                                <!-- END: call-of-duty-logo.svg -->
+                              </div>
+                            </div>
+                            <div class="selected-game__additional">
+                              <div class="form-field">
+                                <input type="text" class="form-field__input" placeholder="Enter Activision ID" required="">
+                              </div>
+                              <div class="form-field-hint">Hero Name needs this to add you on Game before your session. Make sure it’s correct!</div>
+                            </div>
+                            <div class="selected-game__actions">
+                              <button type="submit" disabled class="primary-button primary-button--solid">Next</button>
+                            </div>
+                          </div>
+                        </v-stepper-content>
+                        <v-stepper-step complete editable step="2">
+                          <div class="v-stepper__title">Choose Day</div>
+                          <div class="v-stepper__description">Below are the days the hero is available.</div>
+                          <div class="v-stepper__selected-value">
+                            13/10/2020
+                          </div>
+                        </v-stepper-step>
+                        <v-stepper-content step="2">
                           <v-date-picker
                             @input="newDateIsChosen"
                             :attributes='attributes'
@@ -113,295 +121,295 @@
                             title-position="left"
                             v-model='selectedDate'
                           />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="scheduling-steps__step scheduling-steps__step--active">
-                      <div class="scheduling-steps__title">Choose Time</div>
-                      <div class="scheduling-steps__description">Select <b>2</b> windows you’re able to play your session.</div>
-                      <div class="scheduling-steps__content">
-                        <div class="time-slot-list">
-                          <div class="time-slot-list__timezone">
-                            <div class="select-field">
-                              <div class="select-field__prefix">
-                                <!-- START: icons/info.svg -->
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M15.0001 7.99984C15.0001 11.8658 11.8661 14.9998 8.00008 14.9998C4.13409 14.9998 1.00008 11.8658 1.00008 7.99984C1.00008 4.13384 4.13409 0.999837 8.00008 0.999837C11.8661 0.999837 15.0001 4.13384 15.0001 7.99984Z" stroke="#EB922F" stroke-width="0.666667" stroke-linecap="round" stroke-linejoin="round"/>
-                                  <path d="M8.00024 5.06641V7.99974" stroke="#EB922F" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                                  <path d="M8.00024 10.9331H8.00758" stroke="#EB922F" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <!-- END: icons/info.svg -->
-                              </div>
-                              <select class="select-field__select">
-                                <option value="15">Central Time (US & Canada)</option>
-                                <option value="30">Central Time (US & Canada)</option>
-                                <option value="60">Central Time (US & Canada)</option>
-                              </select>
-                              <div class="select-field__suffix">
-                                <!-- START: icons/chevron-right.svg -->
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M4.66663 14.6666L11.3333 7.99998L4.66663 1.33331" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <!-- END: icons/chevron-right.svg -->
+                        </v-stepper-content>
+                        <v-stepper-step editable step="3">
+                          <div class="v-stepper__title">Choose Time</div>
+                          <div class="v-stepper__description">Select <b>2</b> times that you’re able to play your session.</div>
+                        </v-stepper-step>
+                        <v-stepper-content step="3">
+                          <div class="time-slot-list">
+                            <div class="time-slot-list__timezone">
+                              <div class="select-field">
+                                <div class="select-field__prefix">
+                                  <!-- START: icons/info.svg -->
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.0001 7.99984C15.0001 11.8658 11.8661 14.9998 8.00008 14.9998C4.13409 14.9998 1.00008 11.8658 1.00008 7.99984C1.00008 4.13384 4.13409 0.999837 8.00008 0.999837C11.8661 0.999837 15.0001 4.13384 15.0001 7.99984Z" stroke="#EB922F" stroke-width="0.666667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.00024 5.06641V7.99974" stroke="#EB922F" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.00024 10.9331H8.00758" stroke="#EB922F" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                  <!-- END: icons/info.svg -->
+                                </div>
+                                <select class="select-field__select">
+                                  <option value="15">Central Time (US & Canada)</option>
+                                  <option value="30">Central Time (US & Canada)</option>
+                                  <option value="60">Central Time (US & Canada)</option>
+                                </select>
+                                <div class="select-field__suffix">
+                                  <!-- START: icons/chevron-right.svg -->
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.66663 14.6666L11.3333 7.99998L4.66663 1.33331" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                  <!-- END: icons/chevron-right.svg -->
+                                </div>
                               </div>
                             </div>
+                            <button type="button" class="time-slot-list__item">1:00pm - 2:00pm</button>
+                            <button type="button" class="time-slot-list__item">2:00pm - 3:00pm</button>
+                            <button type="button" class="time-slot-list__item">3:00pm - 4:00pm</button>
+                            <button type="button" class="time-slot-list__item">4:00pm - 5:00pm</button>
+                            <div class="time-slot-list__additional">
+                              <div class="form-field-hint">These are the times the hero is available in your timezone.</div>
+                            </div>
+                            <div class="time-slot-list__actions">
+                              <button type="submit" disabled class="primary-button primary-button--solid">Finish</button>
+                            </div>
                           </div>
-                          <button type="button" class="time-slot-list__item">1:00pm - 2:00pm</button>
-                          <button type="button" class="time-slot-list__item">2:00pm - 3:00pm</button>
-                          <button type="button" class="time-slot-list__item">3:00pm - 4:00pm</button>
-                          <button type="button" class="time-slot-list__item">4:00pm - 5:00pm</button>
-                          <div class="time-slot-list__additional">
-                            <div class="form-field-hint">These are the times the hero is available in your timezone.</div>
-                          </div>
-                          <div class="time-slot-list__actions">
-                            <button type="submit" disabled class="primary-button primary-button--solid">Finish</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                        </v-stepper-content> 
+                    </v-stepper>
+                  </div>
+                </div>
+              </div>
+              <div class="boxed-sections__item boxed-sections__item--col-12">
+                <div class="purchase-note">
+                  <div class="purchase-note__title">Please Note</div>
+                  <div class="purchase-note__content">
+                    <p>Your booking has been processed in GBP. You have been charged <b>£000</b>.</p>
+                    <p>By making this booking, you agree to our <a href="#">Terms</a> & <a href="#">Privacy Policy</a>.</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="boxed-sections__item boxed-sections__item--col-12">
-              <div class="purchase-note">
-                <div class="purchase-note__title">Please Note</div>
-                <div class="purchase-note__content">
-                  <p>Your booking has been processed in GBP. You have been charged <b>£000</b>.</p>
-                  <p>By making this booking, you agree to our <a href="#">Terms</a> & <a href="#">Privacy Policy</a>.</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-      </div>
-      <div class="page__footer">
-        <div class="page__footer-container">
-          <div class="page__footer-section">
-            <a aria-current="page" class="page__logo" href="/">
-              <img
-                class="page__logo-image"
-                src="./assets/logo-white.svg"
-                alt="Playhero"
-              />
-            </a>
-            <a href="mailto:hello@playhero.co" class="page__contact">
-              <span class="page__contact-icon">
-                <!-- START: contact.svg -->
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M3.2 3H20.8C22.01 3 23 4.0125 23 5.25V18.75C23 19.9875 22.01 21 20.8 21H3.2C1.99 21 1 19.9875 1 18.75V5.25C1 4.0125 1.99 3 3.2 3Z"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M23 5.25L12 13.125L1 5.25"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-                <!-- END: contact.svg -->
-              </span>
-              <span class="page__contact-label">hello@playhero.co</span>
-            </a>
-          </div>
-          <div class="page__footer-section">
-            <div>
-              <ul class="footer-menu">
-                <li class="footer-menu__item">
-                  <a class="footer-menu__link" href="/">Terms</a>
-                </li>
-                <li class="footer-menu__item">
-                  <a class="footer-menu__link" href="/">Privacy</a>
-                </li>
-                <li class="footer-menu__item">
-                  <a class="footer-menu__link" href="/">Cookies</a>
-                </li>
-              </ul>
+        <div class="page__footer">
+          <div class="page__footer-container">
+            <div class="page__footer-section">
+              <a aria-current="page" class="page__logo" href="/">
+                <img
+                  class="page__logo-image"
+                  src="./assets/logo-white.svg"
+                  alt="Playhero"
+                />
+              </a>
+              <a href="mailto:hello@playhero.co" class="page__contact">
+                <span class="page__contact-icon">
+                  <!-- START: contact.svg -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M3.2 3H20.8C22.01 3 23 4.0125 23 5.25V18.75C23 19.9875 22.01 21 20.8 21H3.2C1.99 21 1 19.9875 1 18.75V5.25C1 4.0125 1.99 3 3.2 3Z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M23 5.25L12 13.125L1 5.25"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <!-- END: contact.svg -->
+                </span>
+                <span class="page__contact-label">hello@playhero.co</span>
+              </a>
             </div>
-            <div>
-              <ul class="social-link-list">
-                <li class="social-link-list__item">
-                  <a class="social-link-list__link" href="/" title="Email">
-                    <!-- START: social-email.svg -->
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                      <path
-                        d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
-                        fill="#FF9500"
-                      ></path>
-                      <path
-                        d="M11.2 11H28.8C30.01 11 31 12.0125 31 13.25V26.75C31 27.9875 30.01 29 28.8 29H11.2C9.99 29 9 27.9875 9 26.75V13.25C9 12.0125 9.99 11 11.2 11Z"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M31 13.25L20 21.125L9 13.25"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                    <!-- END: social-email.svg -->
-                  </a>
-                </li>
-                <li class="social-link-list__item">
-                  <a class="social-link-list__link" href="/" title="Instagram">
-                    <!-- START: social-instagram.svg -->
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                      <g clip-path="url(#social-instagram-clip0)">
-                        <path
-                          d="M20 39.9975C31.0457 39.9975 40 31.0432 40 19.9975C40 8.9518 31.0457 -0.00250244 20 -0.00250244C8.95431 -0.00250244 0 8.9518 0 19.9975C0 31.0432 8.95431 39.9975 20 39.9975Z"
-                          fill="#FF9500"
-                        ></path>
-                        <path
-                          d="M31.9499 21.609V29.8545H27.1694V22.1616C27.1694 20.23 26.4792 18.9108 24.7483 18.9108C23.4274 18.9108 22.6427 19.7989 22.2961 20.6588C22.1703 20.9662 22.1378 21.3929 22.1378 21.824V29.8542H17.3569C17.3569 29.8542 17.4211 16.8248 17.3569 15.4761H22.1382V17.5136C22.1286 17.5297 22.115 17.5454 22.1065 17.5607H22.1382V17.5136C22.7735 16.5361 23.9065 15.1385 26.4467 15.1385C29.5919 15.1385 31.9499 17.1935 31.9499 21.609ZM12.3557 8.54539C10.7203 8.54539 9.65039 9.61887 9.65039 11.0293C9.65039 12.4097 10.6893 13.5142 12.2929 13.5142H12.3239C13.9914 13.5142 15.0281 12.4097 15.0281 11.0293C14.9964 9.61887 13.9914 8.54539 12.3557 8.54539ZM9.93454 29.8545H14.7137V15.4761H9.93454V29.8545Z"
-                          fill="white"
-                        ></path>
+            <div class="page__footer-section">
+              <div>
+                <ul class="footer-menu">
+                  <li class="footer-menu__item">
+                    <a class="footer-menu__link" href="/">Terms</a>
+                  </li>
+                  <li class="footer-menu__item">
+                    <a class="footer-menu__link" href="/">Privacy</a>
+                  </li>
+                  <li class="footer-menu__item">
+                    <a class="footer-menu__link" href="/">Cookies</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul class="social-link-list">
+                  <li class="social-link-list__item">
+                    <a class="social-link-list__link" href="/" title="Email">
+                      <!-- START: social-email.svg -->
+                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                         <path
                           d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
                           fill="#FF9500"
                         ></path>
-                        <g clip-path="url(#social-instagram-clip1)">
+                        <path
+                          d="M11.2 11H28.8C30.01 11 31 12.0125 31 13.25V26.75C31 27.9875 30.01 29 28.8 29H11.2C9.99 29 9 27.9875 9 26.75V13.25C9 12.0125 9.99 11 11.2 11Z"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <path
+                          d="M31 13.25L20 21.125L9 13.25"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                      <!-- END: social-email.svg -->
+                    </a>
+                  </li>
+                  <li class="social-link-list__item">
+                    <a class="social-link-list__link" href="/" title="Instagram">
+                      <!-- START: social-instagram.svg -->
+                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <g clip-path="url(#social-instagram-clip0)">
                           <path
-                            d="M24.6875 7.5H15.3125C10.9984 7.5 7.5 10.9984 7.5 15.3125V24.6875C7.5 29.0016 10.9984 32.5 15.3125 32.5H24.6875C29.0016 32.5 32.5 29.0016 32.5 24.6875V15.3125C32.5 10.9984 29.0016 7.5 24.6875 7.5ZM30.1562 24.6875C30.1562 27.7031 27.7031 30.1562 24.6875 30.1562H15.3125C12.2969 30.1562 9.84375 27.7031 9.84375 24.6875V15.3125C9.84375 12.2969 12.2969 9.84375 15.3125 9.84375H24.6875C27.7031 9.84375 30.1562 12.2969 30.1562 15.3125V24.6875Z"
+                            d="M20 39.9975C31.0457 39.9975 40 31.0432 40 19.9975C40 8.9518 31.0457 -0.00250244 20 -0.00250244C8.95431 -0.00250244 0 8.9518 0 19.9975C0 31.0432 8.95431 39.9975 20 39.9975Z"
+                            fill="#FF9500"
+                          ></path>
+                          <path
+                            d="M31.9499 21.609V29.8545H27.1694V22.1616C27.1694 20.23 26.4792 18.9108 24.7483 18.9108C23.4274 18.9108 22.6427 19.7989 22.2961 20.6588C22.1703 20.9662 22.1378 21.3929 22.1378 21.824V29.8542H17.3569C17.3569 29.8542 17.4211 16.8248 17.3569 15.4761H22.1382V17.5136C22.1286 17.5297 22.115 17.5454 22.1065 17.5607H22.1382V17.5136C22.7735 16.5361 23.9065 15.1385 26.4467 15.1385C29.5919 15.1385 31.9499 17.1935 31.9499 21.609ZM12.3557 8.54539C10.7203 8.54539 9.65039 9.61887 9.65039 11.0293C9.65039 12.4097 10.6893 13.5142 12.2929 13.5142H12.3239C13.9914 13.5142 15.0281 12.4097 15.0281 11.0293C14.9964 9.61887 13.9914 8.54539 12.3557 8.54539ZM9.93454 29.8545H14.7137V15.4761H9.93454V29.8545Z"
                             fill="white"
                           ></path>
                           <path
-                            d="M20 13.75C16.5484 13.75 13.75 16.5484 13.75 20C13.75 23.4516 16.5484 26.25 20 26.25C23.4516 26.25 26.25 23.4516 26.25 20C26.25 16.5484 23.4516 13.75 20 13.75ZM20 23.9062C17.8469 23.9062 16.0938 22.1531 16.0938 20C16.0938 17.8453 17.8469 16.0938 20 16.0938C22.1531 16.0938 23.9062 17.8453 23.9062 20C23.9062 22.1531 22.1531 23.9062 20 23.9062Z"
-                            fill="white"
+                            d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
+                            fill="#FF9500"
+                          ></path>
+                          <g clip-path="url(#social-instagram-clip1)">
+                            <path
+                              d="M24.6875 7.5H15.3125C10.9984 7.5 7.5 10.9984 7.5 15.3125V24.6875C7.5 29.0016 10.9984 32.5 15.3125 32.5H24.6875C29.0016 32.5 32.5 29.0016 32.5 24.6875V15.3125C32.5 10.9984 29.0016 7.5 24.6875 7.5ZM30.1562 24.6875C30.1562 27.7031 27.7031 30.1562 24.6875 30.1562H15.3125C12.2969 30.1562 9.84375 27.7031 9.84375 24.6875V15.3125C9.84375 12.2969 12.2969 9.84375 15.3125 9.84375H24.6875C27.7031 9.84375 30.1562 12.2969 30.1562 15.3125V24.6875Z"
+                              fill="white"
+                            ></path>
+                            <path
+                              d="M20 13.75C16.5484 13.75 13.75 16.5484 13.75 20C13.75 23.4516 16.5484 26.25 20 26.25C23.4516 26.25 26.25 23.4516 26.25 20C26.25 16.5484 23.4516 13.75 20 13.75ZM20 23.9062C17.8469 23.9062 16.0938 22.1531 16.0938 20C16.0938 17.8453 17.8469 16.0938 20 16.0938C22.1531 16.0938 23.9062 17.8453 23.9062 20C23.9062 22.1531 22.1531 23.9062 20 23.9062Z"
+                              fill="white"
+                            ></path>
+                            <path
+                              d="M26.7186 14.1141C27.1785 14.1141 27.5514 13.7412 27.5514 13.2813C27.5514 12.8213 27.1785 12.4484 26.7186 12.4484C26.2586 12.4484 25.8857 12.8213 25.8857 13.2813C25.8857 13.7412 26.2586 14.1141 26.7186 14.1141Z"
+                              fill="white"
+                            ></path>
+                          </g>
+                        </g>
+                        <defs>
+                          <clipPath id="social-instagram-clip0">
+                            <path d="M0 0H40V40H0V0Z" fill="white"></path>
+                          </clipPath>
+                          <clipPath id="social-instagram-clip1">
+                            <rect
+                              x="7.5"
+                              y="7.5"
+                              width="25"
+                              height="25"
+                              fill="white"
+                            ></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <!-- END: social-instagram.svg -->
+                    </a>
+                  </li>
+                  <li class="social-link-list__item">
+                    <a class="social-link-list__link" href="/" title="Twitter">
+                      <!-- START: social-twitter.svg -->
+                      <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <g clip-path="url(#social-twitter-clip0)">
+                          <path
+                            d="M20 40.0002C31.0457 40.0002 40 31.0458 40 20.0001C40 8.95437 31.0457 4.57764e-05 20 4.57764e-05C8.95432 4.57764e-05 0 8.95437 0 20.0001C0 31.0458 8.95432 40.0002 20 40.0002Z"
+                            fill="#EB922F"
                           ></path>
                           <path
-                            d="M26.7186 14.1141C27.1785 14.1141 27.5514 13.7412 27.5514 13.2813C27.5514 12.8213 27.1785 12.4484 26.7186 12.4484C26.2586 12.4484 25.8857 12.8213 25.8857 13.2813C25.8857 13.7412 26.2586 14.1141 26.7186 14.1141Z"
+                            d="M32.8241 12.0443C31.8807 12.4629 30.8675 12.7459 29.8021 12.8731C30.8894 12.222 31.7223 11.1903 32.1156 9.96244C31.0828 10.5759 29.9525 11.0077 28.7738 11.2392C27.8145 10.2168 26.4466 9.5784 24.9333 9.5784C22.0285 9.5784 19.6727 11.9332 19.6727 14.8397C19.6727 15.2515 19.7191 15.6532 19.8083 16.039C15.4355 15.8192 11.5588 13.7246 8.96391 10.5419C8.51081 11.3192 8.25146 12.223 8.25146 13.1873C8.25146 15.0124 9.18042 16.6227 10.592 17.566C9.75635 17.5401 8.93908 17.3145 8.20847 16.9082V16.9747C8.20847 19.524 10.0218 21.6498 12.4288 22.1333C11.9867 22.2544 11.5226 22.3177 11.0425 22.3177C10.7031 22.3177 10.3738 22.2856 10.0521 22.2251C10.7217 24.3146 12.6647 25.8356 14.9664 25.8786C13.1657 27.2901 10.8968 28.1316 8.43251 28.1316C8.00806 28.1316 7.58857 28.1062 7.17676 28.0566C9.50551 29.5498 12.2705 30.4215 15.2419 30.4215C24.919 30.4215 30.2114 22.4045 30.2114 15.452C30.2114 15.2238 30.2064 14.9972 30.1954 14.7715C31.2265 14.0257 32.1167 13.1022 32.8241 12.0443Z"
                             fill="white"
                           ></path>
                         </g>
-                      </g>
-                      <defs>
-                        <clipPath id="social-instagram-clip0">
-                          <path d="M0 0H40V40H0V0Z" fill="white"></path>
-                        </clipPath>
-                        <clipPath id="social-instagram-clip1">
-                          <rect
-                            x="7.5"
-                            y="7.5"
-                            width="25"
-                            height="25"
-                            fill="white"
-                          ></rect>
-                        </clipPath>
-                      </defs>
-                    </svg>
-                    <!-- END: social-instagram.svg -->
-                  </a>
-                </li>
-                <li class="social-link-list__item">
-                  <a class="social-link-list__link" href="/" title="Twitter">
-                    <!-- START: social-twitter.svg -->
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                      <g clip-path="url(#social-twitter-clip0)">
-                        <path
-                          d="M20 40.0002C31.0457 40.0002 40 31.0458 40 20.0001C40 8.95437 31.0457 4.57764e-05 20 4.57764e-05C8.95432 4.57764e-05 0 8.95437 0 20.0001C0 31.0458 8.95432 40.0002 20 40.0002Z"
-                          fill="#EB922F"
-                        ></path>
-                        <path
-                          d="M32.8241 12.0443C31.8807 12.4629 30.8675 12.7459 29.8021 12.8731C30.8894 12.222 31.7223 11.1903 32.1156 9.96244C31.0828 10.5759 29.9525 11.0077 28.7738 11.2392C27.8145 10.2168 26.4466 9.5784 24.9333 9.5784C22.0285 9.5784 19.6727 11.9332 19.6727 14.8397C19.6727 15.2515 19.7191 15.6532 19.8083 16.039C15.4355 15.8192 11.5588 13.7246 8.96391 10.5419C8.51081 11.3192 8.25146 12.223 8.25146 13.1873C8.25146 15.0124 9.18042 16.6227 10.592 17.566C9.75635 17.5401 8.93908 17.3145 8.20847 16.9082V16.9747C8.20847 19.524 10.0218 21.6498 12.4288 22.1333C11.9867 22.2544 11.5226 22.3177 11.0425 22.3177C10.7031 22.3177 10.3738 22.2856 10.0521 22.2251C10.7217 24.3146 12.6647 25.8356 14.9664 25.8786C13.1657 27.2901 10.8968 28.1316 8.43251 28.1316C8.00806 28.1316 7.58857 28.1062 7.17676 28.0566C9.50551 29.5498 12.2705 30.4215 15.2419 30.4215C24.919 30.4215 30.2114 22.4045 30.2114 15.452C30.2114 15.2238 30.2064 14.9972 30.1954 14.7715C31.2265 14.0257 32.1167 13.1022 32.8241 12.0443Z"
-                          fill="white"
-                        ></path>
-                      </g>
-                      <defs>
-                        <clipPath id="social-twitter-clip0">
-                          <path d="M0 0H40V40H0V0Z" fill="white"></path>
-                        </clipPath>
-                      </defs>
-                    </svg>
-                    <!-- END: social-twitter.svg -->
-                  </a>
-                </li>
-              </ul>
+                        <defs>
+                          <clipPath id="social-twitter-clip0">
+                            <path d="M0 0H40V40H0V0Z" fill="white"></path>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <!-- END: social-twitter.svg -->
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="page__mobile-toolbar">
-        <ul class="toolbar-menu">
-          <li>
-            <a
-              aria-current="page"
-              class="toolbar-menu__link toolbar-menu__link--active"
-              href="/"
-            >
-              <span class="toolbar-menu__icon">
-                <!-- START: account.svg -->
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M11.6672 1.10495C11.8476 0.965015 12.0998 0.965015 12.2802 1.10495L21.7539 8.45505C21.876 8.54976 21.9474 8.69559 21.9474 8.85009V20.4002C21.9474 21.0902 21.6726 21.7517 21.1839 22.2392C20.6952 22.7266 20.0327 23.0003 19.3421 23.0003H14.8154V23.0002C14.5393 23.0002 14.3154 22.7763 14.3154 22.5002V13.8696H9.63121V22.5002C9.63121 22.7763 9.40735 23.0002 9.13121 23.0002V23.0003H4.60527C3.91471 23.0003 3.25218 22.7266 2.76351 22.2392C2.27479 21.7517 2 21.0902 2 20.4002V8.85009C2 8.69559 2.07143 8.54976 2.19351 8.45505L11.6672 1.10495ZM8.63121 22.0003V13.3696C8.63121 13.0934 8.85506 12.8696 9.13121 12.8696H14.8154C15.0916 12.8696 15.3154 13.0934 15.3154 13.3696V22.0003H19.3421C19.7683 22.0003 20.1767 21.8314 20.4777 21.5312C20.7786 21.231 20.9474 20.8242 20.9474 20.4002V9.09501L11.9737 2.13284L3 9.09501V20.4002C3 20.8242 3.16882 21.231 3.46973 21.5312C3.77068 21.8314 4.17912 22.0003 4.60527 22.0003H8.63121Z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-                <!-- END: account.svg -->
-              </span>
-              <span class="toolbar-menu__label">Home</span>
-            </a>
-          </li>
-          <li>
-            <a class="toolbar-menu__link" href="/">
-              <span class="toolbar-menu__icon">
-                <!-- START: contacts.svg -->
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M3.2 3H20.8C22.01 3 23 4.0125 23 5.25V18.75C23 19.9875 22.01 21 20.8 21H3.2C1.99 21 1 19.9875 1 18.75V5.25C1 4.0125 1.99 3 3.2 3Z"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M23 5.25L12 13.125L1 5.25"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-                <!-- END: contacts.svg -->
-              </span>
-              <span class="toolbar-menu__label">Contact</span>
-            </a>
-          </li>
-          <li>
-            <a class="toolbar-menu__link" href="/">
-              <span class="toolbar-menu__icon">
-                <!-- START: account.svg -->
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M22 23V20.3333C22 18.9188 21.4732 17.5623 20.5355 16.5621C19.5979 15.5619 18.3261 15 17 15H7C5.67392 15 4.40215 15.5619 3.46447 16.5621C2.52678 17.5623 2 18.9188 2 20.3333V23"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M12 11C14.7614 11 17 8.76142 17 6C17 3.23858 14.7614 1 12 1C9.23858 1 7 3.23858 7 6C7 8.76142 9.23858 11 12 11Z"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-                <!-- END: account.svg -->
-              </span>
-              <span class="toolbar-menu__label">Account</span>
-            </a>
-          </li>
-        </ul>
+        <div class="page__mobile-toolbar">
+          <ul class="toolbar-menu">
+            <li>
+              <a
+                aria-current="page"
+                class="toolbar-menu__link toolbar-menu__link--active"
+                href="/"
+              >
+                <span class="toolbar-menu__icon">
+                  <!-- START: account.svg -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M11.6672 1.10495C11.8476 0.965015 12.0998 0.965015 12.2802 1.10495L21.7539 8.45505C21.876 8.54976 21.9474 8.69559 21.9474 8.85009V20.4002C21.9474 21.0902 21.6726 21.7517 21.1839 22.2392C20.6952 22.7266 20.0327 23.0003 19.3421 23.0003H14.8154V23.0002C14.5393 23.0002 14.3154 22.7763 14.3154 22.5002V13.8696H9.63121V22.5002C9.63121 22.7763 9.40735 23.0002 9.13121 23.0002V23.0003H4.60527C3.91471 23.0003 3.25218 22.7266 2.76351 22.2392C2.27479 21.7517 2 21.0902 2 20.4002V8.85009C2 8.69559 2.07143 8.54976 2.19351 8.45505L11.6672 1.10495ZM8.63121 22.0003V13.3696C8.63121 13.0934 8.85506 12.8696 9.13121 12.8696H14.8154C15.0916 12.8696 15.3154 13.0934 15.3154 13.3696V22.0003H19.3421C19.7683 22.0003 20.1767 21.8314 20.4777 21.5312C20.7786 21.231 20.9474 20.8242 20.9474 20.4002V9.09501L11.9737 2.13284L3 9.09501V20.4002C3 20.8242 3.16882 21.231 3.46973 21.5312C3.77068 21.8314 4.17912 22.0003 4.60527 22.0003H8.63121Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                  <!-- END: account.svg -->
+                </span>
+                <span class="toolbar-menu__label">Home</span>
+              </a>
+            </li>
+            <li>
+              <a class="toolbar-menu__link" href="/">
+                <span class="toolbar-menu__icon">
+                  <!-- START: contacts.svg -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M3.2 3H20.8C22.01 3 23 4.0125 23 5.25V18.75C23 19.9875 22.01 21 20.8 21H3.2C1.99 21 1 19.9875 1 18.75V5.25C1 4.0125 1.99 3 3.2 3Z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M23 5.25L12 13.125L1 5.25"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <!-- END: contacts.svg -->
+                </span>
+                <span class="toolbar-menu__label">Contact</span>
+              </a>
+            </li>
+            <li>
+              <a class="toolbar-menu__link" href="/">
+                <span class="toolbar-menu__icon">
+                  <!-- START: account.svg -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M22 23V20.3333C22 18.9188 21.4732 17.5623 20.5355 16.5621C19.5979 15.5619 18.3261 15 17 15H7C5.67392 15 4.40215 15.5619 3.46447 16.5621C2.52678 17.5623 2 18.9188 2 20.3333V23"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M12 11C14.7614 11 17 8.76142 17 6C17 3.23858 14.7614 1 12 1C9.23858 1 7 3.23858 7 6C7 8.76142 9.23858 11 12 11Z"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  <!-- END: account.svg -->
+                </span>
+                <span class="toolbar-menu__label">Account</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <!-- 1. Link Vue Javascript -->
-    <script src='https://unpkg.com/vue/dist/vue.js'></script>
-    <!-- 2. Link VCalendar Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <!-- 2. Link Vue plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
     <script src='https://unpkg.com/v-calendar'></script>
     <!--3. Create the Vue instance-->
     <script>
@@ -432,6 +440,7 @@
               order: 2
             }
           ],
+          e1: 3,
           selectAttribute: {
             highlight: {
               class: "playhero-vcalendar__day-bg playhero-vcalendar__day-bg--selected",

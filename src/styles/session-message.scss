@@ -122,4 +122,9 @@
             background-position: 50% 50%;
         }
     }
+
+    @media (max-width: $bp-max-mobile-landscape) {
+      border-radius: 0;
+      padding: 0;
+    }
 }

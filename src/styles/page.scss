@@ -186,7 +186,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 1;
+      z-index: 999;
     }
 
     &__header-menu {
@@ -201,6 +201,7 @@
       display: block;
       color: #acacac;
       position: fixed;
+      z-index: 999;
       bottom: 0;
       width: 100%;
       background: #ffffff;
